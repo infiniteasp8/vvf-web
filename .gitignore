@@ -24,3 +24,7 @@ blob-report/
 *.log
 .lighthouse/
 .screenshots/
+
+# cloudflare wrangler (local state and generated types)
+.wrangler/
+worker-configuration.d.ts

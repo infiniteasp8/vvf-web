@@ -19,7 +19,24 @@ git remote add origin https://github.com/<you>/vvf-web.git
 git push -u origin main
 ```
 
-## Cloudflare Pages (recommended)
+## Cloudflare Workers (what the live site uses)
+
+The repository is connected to a git-backed Worker named `vvf-web`. Every push to `main` triggers a build on Cloudflare. `wrangler.jsonc` in the repository tells Wrangler to publish `dist/` as static assets with no server code, so the deploy step needs nothing else.
+
+Project settings (Workers & Pages → vvf-web → Settings → Build):
+
+| Setting                   | Value                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| Build command             | `npm run build`                                                                |
+| Deploy command            | `npx wrangler deploy`                                                          |
+| Root directory            | `/`                                                                            |
+| Build variable `SITE_URL` | the real address without a trailing slash, e.g. `https://www.vedvidyalaya.org` |
+
+Node comes from `.nvmrc`. The headers in `public/_headers` and the custom 404 page are honoured by the assets host. Custom domain: Settings → Domains & Routes → Add → Custom domain, then set `SITE_URL` to match and redeploy.
+
+To check a deploy locally without publishing: `npx wrangler deploy --dry-run` after `npm run build`.
+
+## Cloudflare Pages (alternative)
 
 Free, unlimited bandwidth, global CDN, honours `public/_headers` (security and caching headers).
 
