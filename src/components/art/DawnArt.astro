@@ -1,0 +1,95 @@
+---
+/**
+ * The hero illustration: sun rising over a horizon line, a lamp in the foreground.
+ * Built as stacked SVG layers so the rays, glow and flame animate on the
+ * compositor (transform/opacity on whole elements) instead of repainting the
+ * drawing every frame. Replace with a photograph later by swapping this
+ * component for an <Image>.
+ */
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const layer = 'absolute inset-0 h-full w-full';
+---
+
+<div class="relative h-full w-full overflow-hidden" role="img" aria-label={title}>
+  <svg class={layer} viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="dawn-sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F1E9D8"></stop>
+        <stop offset="0.5" stop-color="#F3C98B"></stop>
+        <stop offset="1" stop-color="#E9A866"></stop>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="1000" fill="url(#dawn-sky)"></rect>
+  </svg>
+
+  <svg
+    class={`${layer} rays dawn-rays`}
+    viewBox="0 0 800 1000"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <g fill="#FAF6EE" opacity="0.35">
+      <path d="M400 620L300 20h200z"></path>
+      <path d="M400 620L40 160l120-100z"></path>
+      <path d="M400 620L760 160l-120-100z"></path>
+      <path d="M400 620L0 520v-120z"></path>
+      <path d="M400 620L800 520v-120z"></path>
+      <path d="M400 620L300 1220h200z"></path>
+      <path d="M400 620L40 1080l120 100z"></path>
+      <path d="M400 620L760 1080l-120 100z"></path>
+    </g>
+  </svg>
+
+  <svg
+    class={`${layer} glow`}
+    viewBox="0 0 800 1000"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <defs>
+      <radialGradient id="dawn-glow" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#FAF6EE" stop-opacity="0.9"></stop>
+        <stop offset="1" stop-color="#F3C98B" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+    <circle cx="400" cy="620" r="300" fill="url(#dawn-glow)"></circle>
+  </svg>
+
+  <svg class={layer} viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <circle cx="400" cy="620" r="120" fill="#B5551A"></circle>
+    <rect y="620" width="800" height="380" fill="#5A4E44"></rect>
+    <rect y="620" width="800" height="8" fill="#1F1A17"></rect>
+    <path d="M0 640c160-30 320-30 480 0s240 20 320 0v360H0z" fill="#3E342D"></path>
+    <ellipse cx="400" cy="900" rx="90" ry="22" fill="#1F1A17" opacity="0.4"></ellipse>
+    <path d="M330 860c0 26 32 44 70 44s70-18 70-44z" fill="#8F4213"></path>
+    <ellipse cx="400" cy="860" rx="70" ry="14" fill="#B5551A"></ellipse>
+  </svg>
+
+  <svg
+    class={`${layer} flicker dawn-flame`}
+    viewBox="0 0 800 1000"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="dawn-flame" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#B5551A"></stop>
+        <stop offset="0.5" stop-color="#F3C98B"></stop>
+        <stop offset="1" stop-color="#FAF6EE"></stop>
+      </linearGradient>
+    </defs>
+    <path d="M400 760c-24 38-26 70 0 100 26-30 24-62 0-100z" fill="url(#dawn-flame)"></path>
+  </svg>
+</div>
+
+<style>
+  .dawn-rays {
+    transform-origin: 50% 62%;
+  }
+  .dawn-flame {
+    transform-origin: 50% 86%;
+  }
+</style>

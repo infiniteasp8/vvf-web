@@ -1,0 +1,45 @@
+---
+import type { Locale } from '@/i18n';
+import { locales, localeMeta, localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+
+interface Props {
+  locale: Locale;
+  path: string;
+  tone?: 'paper' | 'night';
+  /** A page has one navigation landmark for languages; other copies are plain groups. */
+  landmark?: boolean;
+  class?: string;
+}
+const { locale, path, tone = 'paper', landmark = true, class: className = '' } = Astro.props;
+const t = getMessages(locale);
+const onPaper = tone === 'paper';
+const Tag = landmark ? 'nav' : 'div';
+---
+
+<Tag
+  role={landmark ? undefined : 'group'}
+  aria-label={t.common.language}
+  class={`flex items-center gap-0.5 ${className}`}
+>
+  {locales.map((code) => {
+    const current = code === locale;
+    const base =
+      'rounded-sm px-2.5 py-1.5 t-ui font-medium no-underline transition-colors duration-200';
+    const idle = onPaper
+      ? 'text-ink-2 hover:bg-paper-2 hover:text-ink'
+      : 'text-paper/75 hover:bg-paper/10 hover:text-paper';
+    const active = onPaper ? 'bg-ink text-paper' : 'bg-paper text-ink';
+    return (
+      <a
+        href={localePath(code, path)}
+        hreflang={localeMeta[code].hreflang}
+        lang={localeMeta[code].htmlLang}
+        aria-current={current ? 'page' : undefined}
+        class={`${base} ${current ? active : idle} ${code === 'en' ? '' : 'font-[family-name:var(--font-deva)]'}`}
+      >
+        {localeMeta[code].nativeName}
+      </a>
+    );
+  })}
+</Tag>

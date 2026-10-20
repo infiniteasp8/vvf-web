@@ -1,0 +1,21 @@
+---
+interface Props {
+  items: string[];
+}
+const { items } = Astro.props;
+---
+
+<section class="page py-10">
+  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {items.map((item, i) => (
+      <li
+        class={`reveal flex items-start gap-3 border-l-2 border-paper-3 pl-4 ${i ? `d${i}` : ''}`}
+      >
+        <span class="t-deva text-xl leading-6 text-kesari" aria-hidden="true">
+          ॥
+        </span>
+        <span class="t-ui text-ink-2">{item}</span>
+      </li>
+    ))}
+  </ul>
+</section>

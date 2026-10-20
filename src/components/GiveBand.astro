@@ -1,0 +1,38 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import GivePanel from './GivePanel.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const g = getMessages(locale).home.give;
+---
+
+<section id="give" class="night-bg scroll-mt-24 py-16 lg:py-24">
+  <div class="page">
+    <div class="reveal max-w-3xl">
+      <p class="t-eyebrow text-amber">{g.kicker}</p>
+      <h2 class="t-h2 mt-3 text-paper">{g.h2}</h2>
+      <p class="t-deva mt-6 text-2xl text-amber" lang="sa">
+        {g.deva}
+      </p>
+      <p class="t-iast mt-1 text-paper/80">{g.translation}</p>
+      <p class="t-lede mt-6 text-paper/85">{g.body}</p>
+      <a
+        href={localePath(locale, '/donate/#letter')}
+        class="nl mt-5 inline-flex items-center gap-2 text-amber"
+      >
+        {g.letterCta}
+        <Icon name="arrow-right" size={16} />
+      </a>
+    </div>
+    <div class="mt-12">
+      <GivePanel locale={locale} />
+    </div>
+    <p class="t-small reveal mt-6 text-paper/60">{g.remark}</p>
+  </div>
+</section>

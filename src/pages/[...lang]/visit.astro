@@ -1,0 +1,175 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localeStaticPaths, localePath, type Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { breadcrumbJsonLd, faqJsonLd, webPageJsonLd } from '@/lib/seo';
+import { faqFor } from '@/lib/pages';
+import { site } from '@/data/site';
+import PageHero from '@/components/PageHero.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import ContactActions from '@/components/ContactActions.astro';
+import Faq from '@/components/Faq.astro';
+import Icon from '@/components/Icon.astro';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const locale = Astro.props.locale as Locale;
+const t = getMessages(locale);
+const v = t.visit;
+const c = t.common.contact;
+const siteUrl = Astro.site!;
+const path = '/visit/';
+const faq = await faqFor('visit', locale);
+const whatsappHref = site.contact.whatsapp
+  ? `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(t.common.whatsapp.text)}`
+  : '';
+const telHref = site.contact.phone ? `tel:${site.contact.phone.replace(/[^+\d]/g, '')}` : '';
+const telText = site.contact.phone.replace(/ /g, '\u00a0');
+---
+
+<BaseLayout
+  locale={locale}
+  title={v.meta.title}
+  description={v.meta.description}
+  path={path}
+  ogImage="/og/visit.png"
+  current="visit"
+  jsonLd={[
+    webPageJsonLd(siteUrl, locale, { path, title: v.meta.title, description: v.meta.description }),
+    breadcrumbJsonLd(siteUrl, locale, [
+      { name: t.common.home, path: '/' },
+      { name: t.common.nav.visit, path },
+    ]),
+    faqJsonLd(faq.plain),
+  ]}
+>
+  <PageHero
+    locale={locale}
+    kicker={v.hero.kicker}
+    title={v.hero.h1}
+    lede={v.hero.lede}
+    crumb={{ name: t.common.nav.visit, path }}
+  >
+    <ContactActions locale={locale} slot="actions" />
+  </PageHero>
+
+  <section class="page py-16 lg:py-24">
+    <SectionHead kicker={v.when.kicker} title={v.when.h2} />
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      {v.when.items.map((item, i) => (
+        <article class={`reveal card p-6 md:p-8 ${i ? `d${i}` : ''}`}>
+          <span class="text-kesari">
+            <Icon name={i === 0 ? 'sun' : 'leaf'} size={28} />
+          </span>
+          <h3 class="t-h3 mt-4 text-ink">{item.title}</h3>
+          <p class="t-lede mt-3 text-ink-2">{item.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-paper-2 py-16 lg:py-24">
+    <div class="page">
+      <SectionHead kicker={v.before.kicker} title={v.before.h2} />
+      <ol class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        {v.before.items.map((item, i) => (
+          <li class={`keep reveal border-t border-line pt-6 ${i ? `d${i}` : ''}`}>
+            <span class="num" aria-hidden="true">
+              {['१', '२', '३', '४'][i]}
+            </span>
+            <h3 class="t-h3 mt-4 text-ink">{item.title}</h3>
+            <p class="mt-3 text-ink-2">{item.body}</p>
+          </li>
+        ))}
+      </ol>
+      {faq.entries.length > 0 && (
+        <div class="mt-16 max-w-3xl">
+          <Faq locale={locale} items={faq.entries} />
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section id="contact" class="page scroll-mt-24 py-16 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+      <SectionHead kicker={v.contact.kicker} title={v.contact.h2} lede={v.contact.lede} />
+      <address class="reveal d1 not-italic">
+        <dl class="divide-y divide-line border-y border-line">
+          {telHref && (
+            <div class="grid gap-1 py-4 sm:grid-cols-[8rem_1fr]">
+              <dt class="t-eyebrow text-ink-2">{c.phone}</dt>
+              <dd>
+                <a href={telHref} class="t-lede text-ink">
+                  {telText}
+                </a>
+              </dd>
+            </div>
+          )}
+          {whatsappHref && (
+            <div class="grid gap-1 py-4 sm:grid-cols-[8rem_1fr]">
+              <dt class="t-eyebrow text-ink-2">{c.whatsapp}</dt>
+              <dd>
+                <a href={whatsappHref} class="t-lede text-ink" rel="noopener">
+                  {t.common.whatsapp.label}
+                </a>
+              </dd>
+            </div>
+          )}
+          {site.contact.email && (
+            <div class="grid gap-1 py-4 sm:grid-cols-[8rem_1fr]">
+              <dt class="t-eyebrow text-ink-2">{c.email}</dt>
+              <dd>
+                <a href={`mailto:${site.contact.email}`} class="t-lede text-ink">
+                  {site.contact.email}
+                </a>
+              </dd>
+            </div>
+          )}
+          <div class="grid gap-1 py-4 sm:grid-cols-[8rem_1fr]">
+            <dt class="t-eyebrow text-ink-2">{c.address}</dt>
+            <dd class="t-lede text-ink">
+              {site.contact.address.lines.map((line) => (
+                <span class="block">{line}</span>
+              ))}
+              {site.contact.mapUrl && (
+                <a
+                  href={site.contact.mapUrl}
+                  class="nl mt-2 inline-flex items-center gap-2 text-kesari-deep"
+                  rel="noopener"
+                >
+                  {c.directions}
+                  <Icon name="external" size={16} />
+                </a>
+              )}
+            </dd>
+          </div>
+        </dl>
+      </address>
+    </div>
+  </section>
+
+  <section id="involved" class="bg-paper-2 scroll-mt-24 py-16 lg:py-24">
+    <div class="page">
+      <SectionHead kicker={v.involved.kicker} title={v.involved.h2} />
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {v.involved.items.map((item, i) => (
+          <article class={`reveal card lift flex flex-col p-6 md:p-7 ${i ? `d${i}` : ''}`}>
+            <h3 class="t-h3 text-ink">{item.title}</h3>
+            <p class="mt-3 flex-1 text-ink-2">{item.body}</p>
+            {i === 2 && (
+              <a
+                href={localePath(locale, '/donate/')}
+                class="nl mt-5 inline-flex w-fit items-center gap-2 text-kesari-deep"
+              >
+                {v.involved.giveCta}
+                <Icon name="arrow-right" size={16} />
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

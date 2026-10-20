@@ -1,0 +1,14 @@
+{
+  "page": "donate",
+  "order": 1,
+  "question": {
+    "en": "Is there a minimum amount?",
+    "hi": "क्या कोई न्यूनतम राशि है?",
+    "sa": "किं न्यूनतमं धनम् अस्ति?"
+  },
+  "answer": {
+    "en": "No. Give what you can. A small gift that returns every month matters more to a Gurukul than you might think, because it lets us plan the kitchen for the year.",
+    "hi": "नहीं। जो बन पड़े दीजिए। हर महीने लौटने वाला छोटा दान गुरुकुल के लिए उससे कहीं अधिक मायने रखता है जितना आप सोचते हैं, क्योंकि उससे हम पूरे वर्ष की रसोई की योजना बना पाते हैं।",
+    "sa": "न। यत् शक्यते तत् ददातु। प्रतिमासं प्रत्यागच्छत् लघु दानं गुरुकुलाय ततः अधिकं महत्त्वपूर्णं यावत् भवन्तः मन्यन्ते, यतः तेन वयं वर्षस्य पाकशालां योजयितुं शक्नुमः।"
+  }
+}

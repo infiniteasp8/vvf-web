@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="t">
+  <title id="t">The morning recitation</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3C98B"/>
+      <stop offset="0.55" stop-color="#FAF6EE"/>
+      <stop offset="1" stop-color="#F1E9D8"/>
+    </linearGradient>
+    <radialGradient id="sunglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F3C98B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F3C98B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E6DAC2"/>
+      <stop offset="1" stop-color="#D9CBB0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1180" cy="330" r="260" fill="url(#sunglow)"/>
+  <circle cx="1180" cy="330" r="88" fill="#B5551A"/>
+  <g fill="#C9B995" opacity="0.7">
+    <ellipse cx="260" cy="430" rx="190" ry="70"/>
+    <ellipse cx="520" cy="450" rx="150" ry="60"/>
+    <ellipse cx="1420" cy="440" rx="180" ry="64"/>
+  </g>
+  <rect y="470" width="1600" height="530" fill="url(#floor)"/>
+  <rect y="470" width="1600" height="6" fill="#B5551A" opacity="0.35"/>
+  <g fill="#F1E9D8" stroke="#D9CBB0" stroke-width="4">
+    <rect x="120" y="120" width="60" height="360"/>
+    <rect x="1420" y="120" width="60" height="360"/>
+    <rect x="80" y="100" width="1480" height="34"/>
+  </g>
+  <g fill="#1F1A17" opacity="0.88">
+    <g transform="translate(300 560)"><circle cx="0" cy="0" r="30"/><path d="M-60 120c0-60 20-90 60-90s60 30 60 90z"/></g>
+    <g transform="translate(470 560)"><circle cx="0" cy="0" r="30"/><path d="M-60 120c0-60 20-90 60-90s60 30 60 90z"/></g>
+    <g transform="translate(640 560)"><circle cx="0" cy="0" r="30"/><path d="M-60 120c0-60 20-90 60-90s60 30 60 90z"/></g>
+    <g transform="translate(810 560)"><circle cx="0" cy="0" r="30"/><path d="M-60 120c0-60 20-90 60-90s60 30 60 90z"/></g>
+    <g transform="translate(980 560)"><circle cx="0" cy="0" r="30"/><path d="M-60 120c0-60 20-90 60-90s60 30 60 90z"/></g>
+  </g>
+  <g fill="#5A4E44" opacity="0.9">
+    <g transform="translate(380 700)"><circle cx="0" cy="0" r="36"/><path d="M-72 150c0-74 24-112 72-112s72 38 72 112z"/></g>
+    <g transform="translate(600 700)"><circle cx="0" cy="0" r="36"/><path d="M-72 150c0-74 24-112 72-112s72 38 72 112z"/></g>
+    <g transform="translate(820 700)"><circle cx="0" cy="0" r="36"/><path d="M-72 150c0-74 24-112 72-112s72 38 72 112z"/></g>
+    <g transform="translate(1040 700)"><circle cx="0" cy="0" r="36"/><path d="M-72 150c0-74 24-112 72-112s72 38 72 112z"/></g>
+  </g>
+  <g transform="translate(1320 620)" fill="#7A2E2E">
+    <circle cx="0" cy="0" r="40"/>
+    <path d="M-84 180c0-90 30-140 84-140s84 50 84 140z"/>
+  </g>
+  <g fill="#B5551A">
+    <ellipse cx="1320" cy="820" rx="34" ry="12"/>
+    <path d="M1320 760c-10 20-10 40 0 54 10-14 10-34 0-54z" fill="#F3C98B"/>
+  </g>
+</svg>

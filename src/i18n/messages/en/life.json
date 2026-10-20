@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "title": "A day in the Gurukul · Ved Vidyalaya Foundation",
+    "description": "From the Gāyatrī before dawn to the evening fire: the rhythm of a day in the Gurukul, the places that hold it, and stories from the seasons of the year."
+  },
+  "hero": {
+    "kicker": "Gurukul life",
+    "h1": "The rhythm has not changed in centuries.",
+    "lede": "The day begins in the dark and ends by firelight. In between there is recitation, grammar, mathematics, a meal cooked by the students, games in the field, and the kind of tiredness that makes sleep easy. The mathematics textbook is the only new thing in the room."
+  },
+  "day": {
+    "kicker": "The hours",
+    "h2": "A day in the Gurukul",
+    "lede": "Choose an hour."
+  },
+  "places": {
+    "kicker": "The place",
+    "h2": "Where the day happens",
+    "items": [
+      {
+        "title": "The verandah",
+        "body": "Cool stone, open on three sides. The morning recitation happens here, and the evening one, and most of the laughter in between."
+      },
+      {
+        "title": "The kitchen",
+        "body": "Run by a different group of students each week. Simple food, cooked with care, eaten together on the floor. Nothing is wasted."
+      },
+      {
+        "title": "The fire",
+        "body": "The agnihotra at dawn and dusk. The students learn to tend it, and to understand what they are tending."
+      },
+      {
+        "title": "The garden and the cows",
+        "body": "Vegetables for the kitchen, milk for the morning, and a daily lesson in care for living things that no classroom could teach."
+      },
+      {
+        "title": "The library and the computer room",
+        "body": "Quiet, in the afternoons. The texts of the tradition on one shelf and the school syllabus on the next."
+      },
+      {
+        "title": "The old tree",
+        "body": "Where the students sit to revise in pairs, where visitors are welcomed, and where, on the hottest afternoons, nothing happens at all."
+      }
+    ]
+  },
+  "stories": {
+    "kicker": "Seasons of the Gurukul",
+    "h2": "Stories from the year",
+    "lede": "A new student's first morning, a festival of gratitude, the monsoon on the roof. Small things, told plainly."
+  },
+  "festivals": {
+    "kicker": "Through the year",
+    "h2": "Festivals, kept the old way",
+    "body": "Guru-pūrṇimā, when the students thank their teachers and the teachers thank theirs. Dīpāvalī, when every lamp in the Gurukul is lit at once. The examinations by visiting scholars, which feel like a festival too. Visitors are welcome at all of them. Write to us and we will tell you the dates for the year."
+  }
+}

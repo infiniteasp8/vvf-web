@@ -1,0 +1,15 @@
+{
+  "order": 2,
+  "date": "2026-07-29",
+  "kicker": { "en": "A festival", "hi": "एक उत्सव", "sa": "एकः उत्सवः" },
+  "title": {
+    "en": "Guru-pūrṇimā, a day for gratitude",
+    "hi": "गुरु-पूर्णिमा, कृतज्ञता का दिन",
+    "sa": "गुरुपूर्णिमा, कृतज्ञतायाः दिनम्"
+  },
+  "body": {
+    "en": "Once a year the students thank the people who taught them, and the teachers thank the people who taught them, all the way back.",
+    "hi": "वर्ष में एक बार विद्यार्थी उन्हें धन्यवाद देते हैं जिन्होंने उन्हें सिखाया, और गुरु उन्हें जिन्होंने उन्हें सिखाया, पीछे तक, सबको।",
+    "sa": "वर्षे सकृत् छात्राः तान् धन्यवादयन्ति यैः ते शिक्षिताः, गुरवः च तान् यैः ते शिक्षिताः, पृष्ठतः सर्वान् यावत्।"
+  }
+}

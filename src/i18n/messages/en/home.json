@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "title": "Ved Vidyalaya Foundation · A living Gurukul for the Vedas, Sanskrit and a full education",
+    "description": "In a quiet Gurukul, children learn the Vedas by heart from a teacher, speak Sanskrit, and study the modern subjects every child needs, free of charge. Help keep a voice older than writing alive."
+  },
+  "hero": {
+    "eyebrow": "Ved Vidyalaya Foundation · A living Gurukul",
+    "h1": "Some things are too precious to write down. They must be remembered.",
+    "lede": "In a quiet Gurukul, children wake before the sun to learn the Vedas the only way they have ever been learned: from a teacher, by ear, by heart. Every lesson, every meal, every lamp is given freely. We exist so that this voice, older than writing, is never left to fall silent.",
+    "cta1": "Help keep the voice alive",
+    "cta2": "Walk through a day",
+    "trust": "Every student learns free of charge · Sustained entirely by people who care",
+    "scroll": "Scroll",
+    "artAlt": "Dawn over the Gurukul: a sun rising behind a horizon line, with a single lamp flame in the foreground",
+    "floatA": "Before sunrise · The first recitation",
+    "floatB": "Every day, in every season."
+  },
+  "ticker": [
+    { "time": "Before dawn", "text": "The Gurukul wakes" },
+    { "time": "Sunrise", "text": "Sandhyā and the first recitation" },
+    { "time": "Morning", "text": "Veda pāṭha with the ācārya" },
+    { "time": "Mid-morning", "text": "Sanskrit grammar" },
+    { "time": "Noon", "text": "Mathematics and science" },
+    { "time": "Midday", "text": "A meal cooked and shared together" },
+    { "time": "Afternoon", "text": "Revision in pairs" },
+    { "time": "Evening", "text": "Games in the field" },
+    { "time": "Dusk", "text": "Sandhyā and the evening fire" },
+    { "time": "Night", "text": "Quiet revision, then rest" }
+  ],
+  "promises": [
+    "Every lesson, meal and bed is free of charge",
+    "Taught by ear and by heart, as it always has been",
+    "No payment gateway: what you give arrives whole",
+    "Visitors welcome at the dawn recitation"
+  ],
+  "why": {
+    "kicker": "Why this matters",
+    "h2": "The Vedas were never written to be read. They were sung to be remembered.",
+    "lede": "For most of human history the Vedas lived nowhere but in people: in the breath of a teacher and the memory of a child, carried forward one morning at a time with every tone and pause intact. A book can be reprinted. A voice, once it goes quiet, cannot. Each tradition survives for exactly as long as there is a child learning it.",
+    "cards": [
+      {
+        "title": "When a reciter passes",
+        "body": "When an elder dies without a student, a library closes that no one can reopen. Our whole work is to make sure there is always a student, sitting on the floor at dawn, ready to receive it."
+      },
+      {
+        "title": "A child's voice is the archive",
+        "body": "No recording holds the Veda the way a trained memory does: living, correcting, able to teach. The children here are not studying a heritage. They are the heritage, continuing."
+      },
+      {
+        "title": "Free, so no one is turned away",
+        "body": "No family pays a rupee. A child from the smallest village can become the ācārya the next generation learns from. That is what your gift makes possible."
+      }
+    ],
+    "cta": "Read why we do this"
+  },
+  "learning": {
+    "kicker": "What a child learns here",
+    "h2": "One education, four strands",
+    "tablistLabel": "Strands of learning",
+    "programs": [
+      {
+        "label": "The Veda",
+        "sa": "वेदपाठः",
+        "title": "The Veda, by heart",
+        "duration": "Many years · one voice",
+        "body": "Students learn their Veda the way it has been learned for millennia: line by line, from a teacher, with every svara in place. Nothing is written down, so nothing can be lost, as long as there is someone to receive it.",
+        "points": [
+          "Morning and evening recitation with the ācārya",
+          "Saṁhitā, pada and krama, each in its turn",
+          "Tested by ear, by visiting scholars"
+        ],
+        "caption": "Morning pāṭha"
+      },
+      {
+        "label": "Sanskrit",
+        "sa": "संस्कृतम्",
+        "title": "A language, spoken",
+        "duration": "Every day · in every class",
+        "body": "Sanskrit is spoken here, not merely studied. Grammar, poetry and the great texts become living things when a child can argue in them, joke in them and pray in them.",
+        "points": [
+          "Spoken Sanskrit from the first week",
+          "Grammar through Pāṇini, poetry through kāvya",
+          "First steps into the śāstras"
+        ],
+        "caption": "Grammar at noon"
+      },
+      {
+        "label": "Modern learning",
+        "sa": "आधुनिकशिक्षा",
+        "title": "No door closed",
+        "duration": "Through the school years",
+        "body": "A Vedic education must leave every door open. Students also study English, mathematics, science and computing, so that they leave able to teach, to earn and to choose their own path.",
+        "points": [
+          "A full school curriculum beside the Veda",
+          "Computers and a quiet library",
+          "Guidance for the years after"
+        ],
+        "caption": "Afternoon lessons"
+      },
+      {
+        "label": "A way of living",
+        "sa": "संस्कारः सेवा च",
+        "title": "Character, lived daily",
+        "duration": "Every day",
+        "body": "Sandhyā at dawn and dusk, the fire tended every day, the kitchen, the garden and the cows cared for by all. Discipline here is not imposed. It is absorbed, the way a language is.",
+        "points": [
+          "Yoga and prāṇāyāma each morning",
+          "Seva: kitchen, garden, goshala, library",
+          "Festivals as living tradition"
+        ],
+        "caption": "Evening seva"
+      }
+    ],
+    "cta": "More about the learning"
+  },
+  "shanti": {
+    "deva": "सह नाववतु । सह नौ भुनक्तु । सह वीर्यं करवावहै । तेजस्वि नावधीतमस्तु मा विद्विषावहै ॥",
+    "iast": "saha nāvavatu, saha nau bhunaktu, saha vīryaṁ karavāvahai, tejasvi nāvadhītam astu, mā vidviṣāvahai",
+    "translation": "May we both be protected. May we both be nourished. May we work together with vigour. May what we study be luminous. May we never hold ill will toward one another.",
+    "note": "Śānti-mantra · recited by teacher and student before every lesson"
+  },
+  "keeps": {
+    "kicker": "What a single Gurukul keeps alive",
+    "h2": "None of it can be stored. All of it must be practised.",
+    "lede": "Four things that exist only while someone, somewhere, is doing them every day.",
+    "items": [
+      {
+        "num": "१",
+        "title": "The sound",
+        "body": "Every accent and every pause of the Veda, carried in living memory, exactly as it was received."
+      },
+      {
+        "num": "२",
+        "title": "The language",
+        "body": "Sanskrit as a spoken tongue, argued in, joked in, prayed in. Not a museum piece."
+      },
+      {
+        "num": "३",
+        "title": "The fire",
+        "body": "The agnihotra at dawn and at dusk, tended by children's hands, day after day without a break."
+      },
+      {
+        "num": "४",
+        "title": "The way",
+        "body": "Simplicity, service, and reverence for every living thing, learned by living it rather than by being told."
+      }
+    ]
+  },
+  "day": {
+    "kicker": "Gurukul life",
+    "h2": "A day in the Gurukul",
+    "lede": "Choose an hour. The rhythm has not changed in centuries; the mathematics textbook is the only new thing in the room.",
+    "tablistLabel": "Hours of the day",
+    "moments": [
+      {
+        "time": "Before dawn",
+        "kicker": "Brahma-muhūrta",
+        "title": "The Gurukul wakes before the birds",
+        "body": "Cold water, a clean dhoti, and the first sound of the day is the Gāyatrī, chanted together on the verandah while it is still dark.",
+        "sa": "ब्राह्मे मुहूर्ते बुध्येत"
+      },
+      {
+        "time": "Sunrise",
+        "kicker": "Veda pāṭha",
+        "title": "Two hours with the ācārya",
+        "body": "He recites a line. The students repeat it, twice forward, then in pairs of words, then in the krama order. Nothing is written down. Nothing is forgotten.",
+        "sa": "स्वाध्यायान्मा प्रमदः"
+      },
+      {
+        "time": "Mid-morning",
+        "kicker": "Śāstra and school",
+        "title": "Grammar, then mathematics",
+        "body": "Pāṇini first, algebra and science after. The same children, two worlds, one desk, and a surprising amount of laughter.",
+        "sa": "विद्या ददाति विनयम्"
+      },
+      {
+        "time": "Midday",
+        "kicker": "Anna and seva",
+        "title": "A meal cooked by the students",
+        "body": "Each week a different group runs the kitchen. Everyone eats together on the floor. Nothing is wasted; the cows get the rest.",
+        "sa": "अन्नं न निन्द्यात्"
+      },
+      {
+        "time": "Evening",
+        "kicker": "Play",
+        "title": "Games until the light goes",
+        "body": "Kho-kho, kabaddi and cricket in the field. Teachers join in. It is loud, and it is meant to be.",
+        "sa": "शरीरमाद्यं खलु धर्मसाधनम्"
+      },
+      {
+        "time": "Dusk",
+        "kicker": "Sandhyā and agnihotra",
+        "title": "The day closes as it began",
+        "body": "Fire and sound. Then dinner, an hour of quiet revision, and sleep early enough that before dawn does not hurt.",
+        "sa": "अग्निमीळे पुरोहितम्"
+      }
+    ],
+    "cta": "More of Gurukul life"
+  },
+  "moments": {
+    "kicker": "Moments",
+    "h2": "Photographs and films from the Gurukul",
+    "lede": "New pictures and short films are added through the year: a festival, an examination, the monsoon, a new student's first morning.",
+    "cta": "See all moments",
+    "film": "Film"
+  },
+  "voices": {
+    "kicker": "Voices",
+    "h2": "From the people who know it best",
+    "prev": "Previous voice",
+    "next": "Next voice",
+    "goTo": "Voice {n}"
+  },
+  "give": {
+    "kicker": "Give",
+    "h2": "Of all the gifts a person can give, the tradition names one above the rest.",
+    "deva": "सर्वेषामेव दानानां ब्रह्मदानं विशिष्यते ।",
+    "translation": "“Of all gifts, the gift of sacred knowledge is the most excellent.”",
+    "body": "There is no payment gateway and no middleman. What you give goes straight to the Gurukul and becomes a meal before the first recitation, oil for the evening lamps, a teacher's dakṣiṇā, a roof that holds through the monsoon. Give what you can, once or every month. Each rupee is a syllable kept alive.",
+    "letterCta": "Read the letter from the Gurukul",
+    "remark": "Add your name in the remark if you would like us to write and thank you."
+  },
+  "stories": {
+    "kicker": "Seasons of the Gurukul",
+    "h2": "Stories from the year",
+    "cta": "All stories"
+  },
+  "visit": {
+    "kicker": "Visit us",
+    "h2": "Come and stand in it at six in the morning.",
+    "body": "No page can do what one morning in the Gurukul does. Visitors are welcome at the dawn recitation and at the midday meal. Write to us a week ahead and we will arrange the rest.",
+    "cta": "Plan a visit"
+  }
+}

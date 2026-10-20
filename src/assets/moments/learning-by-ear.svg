@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t">
+  <title id="t">Learning by ear</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F3C98B"/>
+      <stop offset="0.5" stop-color="#F1E9D8"/>
+      <stop offset="1" stop-color="#E6DAC2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#wall)"/>
+  <rect x="900" y="0" width="70" height="640" fill="#E6DAC2"/>
+  <rect x="900" y="0" width="12" height="640" fill="#D9CBB0"/>
+  <rect y="640" width="1200" height="260" fill="#D9CBB0"/>
+  <rect y="640" width="1200" height="5" fill="#B5551A" opacity="0.3"/>
+  <g fill="#7A2E2E">
+    <circle cx="420" cy="330" r="62"/>
+    <path d="M250 700c0-150 60-230 170-230s170 80 170 230z"/>
+    <path d="M560 470c60 10 110 60 120 130-40 0-90-30-120-130z" opacity="0.9"/>
+  </g>
+  <g fill="#1F1A17" opacity="0.9">
+    <circle cx="760" cy="420" r="42"/>
+    <path d="M650 700c0-110 40-180 110-180s110 70 110 180z"/>
+  </g>
+  <g opacity="0.35" fill="#1F1A17">
+    <path d="M520 560c20-10 40-6 60 10M520 590c20-10 40-6 60 10" stroke="#1F1A17" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+  <g fill="#C9B995">
+    <rect x="990" y="610" width="150" height="24" rx="4"/>
+    <rect x="1000" y="596" width="130" height="14" rx="3"/>
+  </g>
+  <ellipse cx="600" cy="712" rx="330" ry="22" fill="#1F1A17" opacity="0.08"/>
+</svg>

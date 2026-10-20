@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localeStaticPaths, type Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { organizationJsonLd, websiteJsonLd } from '@/lib/seo';
+import { featuredMoments, stories, voices } from '@/lib/pages';
+import { localePath } from '@/i18n';
+
+import Arrival from '@/components/Arrival.astro';
+import Hero from '@/components/Hero.astro';
+import Ticker from '@/components/Ticker.astro';
+import PromiseStrip from '@/components/PromiseStrip.astro';
+import Why from '@/components/Why.astro';
+import LearningTabs from '@/components/LearningTabs.astro';
+import Shloka from '@/components/Shloka.astro';
+import Keeps from '@/components/Keeps.astro';
+import DayTimeline from '@/components/DayTimeline.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import MomentsGrid from '@/components/MomentsGrid.astro';
+import Voices from '@/components/Voices.astro';
+import GiveBand from '@/components/GiveBand.astro';
+import Stories from '@/components/Stories.astro';
+import VisitBand from '@/components/VisitBand.astro';
+import Icon from '@/components/Icon.astro';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const locale = Astro.props.locale as Locale;
+const t = getMessages(locale);
+const siteUrl = Astro.site!;
+const [moments, storyItems, voiceItems] = await Promise.all([
+  featuredMoments(),
+  stories(),
+  voices(),
+]);
+---
+
+<BaseLayout
+  locale={locale}
+  title={t.home.meta.title}
+  description={t.home.meta.description}
+  path="/"
+  ogImage="/og/home.png"
+  jsonLd={[
+    organizationJsonLd(siteUrl, locale, t.common.description),
+    websiteJsonLd(siteUrl, locale, t.common.siteName),
+  ]}
+>
+  <Arrival locale={locale} />
+  <Hero locale={locale} />
+  <Ticker items={t.home.ticker} />
+  <PromiseStrip items={t.home.promises} />
+  <Why locale={locale} />
+  <LearningTabs locale={locale} />
+  <Shloka
+    deva={t.home.shanti.deva}
+    iast={t.home.shanti.iast}
+    translation={t.home.shanti.translation}
+    note={t.home.shanti.note}
+    tone="paper"
+    om
+  />
+  <Keeps locale={locale} />
+  <DayTimeline locale={locale} />
+
+  <section id="moments" class="page scroll-mt-24 py-16 lg:py-24">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <SectionHead
+        kicker={t.home.moments.kicker}
+        title={t.home.moments.h2}
+        lede={t.home.moments.lede}
+      />
+      <a
+        href={localePath(locale, '/moments/')}
+        class="nl reveal inline-flex items-center gap-2 text-kesari-deep"
+      >
+        {t.home.moments.cta}
+        <Icon name="arrow-right" size={16} />
+      </a>
+    </div>
+    <div class="mt-10">
+      <MomentsGrid locale={locale} items={moments} />
+    </div>
+  </section>
+
+  <Voices locale={locale} items={voiceItems} />
+  <GiveBand locale={locale} />
+  <Stories
+    locale={locale}
+    items={storyItems}
+    kicker={t.home.stories.kicker}
+    title={t.home.stories.h2}
+  />
+  <VisitBand locale={locale} />
+</BaseLayout>

@@ -1,0 +1,18 @@
+{
+  "order": 1,
+  "quote": {
+    "en": "I came to see a school. I found a room where a boy of ten was keeping alive something older than every country on the map, and he was shy about it. I have not stopped giving since.",
+    "hi": "मैं एक स्कूल देखने आया था। मुझे एक कमरा मिला जहाँ दस साल का एक लड़का नक़्शे के हर देश से पुरानी किसी चीज़ को जीवित रखे हुए था, और उसे इसमें संकोच हो रहा था। तब से मैंने देना बंद नहीं किया।",
+    "sa": "अहं विद्यालयं द्रष्टुम् आगतः। एकं कक्षम् अपश्यं यत्र दशवर्षीयः बालकः मानचित्रस्य सर्वेभ्यः देशेभ्यः प्राचीनं किञ्चित् जीवन्तं रक्षति स्म, तत्र च लज्जितः आसीत्। ततः आरभ्य दानं न त्यक्तवान्।"
+  },
+  "who": {
+    "en": "A supporter who came to visit",
+    "hi": "एक सहयोगी, जो मिलने आए",
+    "sa": "एकः सहयोगी, यः दर्शनार्थम् आगतः"
+  },
+  "where": {
+    "en": "After one morning at the Gurukul",
+    "hi": "गुरुकुल की एक सुबह के बाद",
+    "sa": "गुरुकुले एकस्य प्रातः अनन्तरम्"
+  }
+}

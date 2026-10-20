@@ -1,0 +1,67 @@
+---
+import type { Locale } from '@/i18n';
+import { getMessages, fill } from '@/i18n/messages';
+import { site } from '@/data/site';
+import { upiLink } from '@/lib/upi';
+import { qrSvg } from '@/lib/qr';
+import CopyButton from './CopyButton.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+  /** Larger QR for the dedicated give page. */
+  large?: boolean;
+}
+const { locale, large = false } = Astro.props;
+const t = getMessages(locale);
+const href = upiLink({
+  id: site.upi.id,
+  payeeName: site.upi.payeeName,
+  merchantCode: site.upi.merchantCode,
+});
+const qr = site.upi.qrImage ? null : await qrSvg(href);
+const qrAlt = fill(t.common.upi.qrAlt, { name: site.upi.payeeName });
+---
+
+<div class="rounded-md border border-line-night bg-night-2/60 p-6 md:p-8">
+  <h3 class="t-h3 text-paper">{t.common.upi.title}</h3>
+  <p class="mt-2 text-paper/80">{t.common.upi.lede}</p>
+
+  <div class="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start">
+    <div
+      class={`shrink-0 rounded-md bg-white p-3 ${large ? 'w-48 md:w-56' : 'w-40'}`}
+      role="img"
+      aria-label={qrAlt}
+    >
+      {site.upi.qrImage ? (
+        <img src={site.upi.qrImage} alt="" width="200" height="200" class="h-auto w-full" />
+      ) : (
+        <div class="qr aspect-square w-full" set:html={qr} />
+      )}
+    </div>
+    <div class="min-w-0 flex-1">
+      <p class="t-eyebrow text-amber">{t.common.upi.idLabel}</p>
+      <div class="mt-2 flex flex-wrap items-center gap-3">
+        <code class="rounded-sm bg-paper/10 px-3 py-2 font-ui text-lg text-paper select-all">
+          {site.upi.id}
+        </code>
+        <CopyButton text={site.upi.id} label={t.common.copy} doneLabel={t.common.copied} />
+      </div>
+      <a href={href} class="btn btn-paper mt-5 w-full sm:w-auto" rel="noopener">
+        <Icon name="external" size={18} />
+        {t.common.upi.open}
+      </a>
+      <p class="t-small mt-4 text-paper/60">
+        {fill(t.common.upi.desktopHint, { name: site.upi.payeeName })}
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .qr :global(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>

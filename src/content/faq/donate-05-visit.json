@@ -1,0 +1,14 @@
+{
+  "page": "donate",
+  "order": 5,
+  "question": {
+    "en": "Can I come and see the Gurukul?",
+    "hi": "क्या मैं आकर गुरुकुल देख सकता/सकती हूँ?",
+    "sa": "किम् आगत्य गुरुकुलं द्रष्टुं शक्नोमि?"
+  },
+  "answer": {
+    "en": "Please do. The best hour is six in the morning. Write to us a week ahead and we will arrange the rest.",
+    "hi": "ज़रूर आइए। सबसे अच्छा समय सुबह छह बजे है। एक सप्ताह पहले लिख दीजिए, बाक़ी हम सँभाल लेंगे।",
+    "sa": "अवश्यम् आगच्छत। उत्तमा वेला प्रातः षड्वादनम्। सप्ताहात् पूर्वं लिखत, शेषं वयं व्यवस्थापयिष्यामः।"
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t">
+  <title id="t">Lamps at dusk</title>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121A2A"/>
+      <stop offset="1" stop-color="#1E2A3F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F3C98B" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#F3C98B" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#F3C98B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#B5551A"/>
+      <stop offset="0.45" stop-color="#F3C98B"/>
+      <stop offset="1" stop-color="#FAF6EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#night)"/>
+  <rect y="640" width="1200" height="260" fill="#17202F"/>
+  <g>
+    <circle cx="300" cy="520" r="230" fill="url(#halo)"/>
+    <circle cx="600" cy="500" r="260" fill="url(#halo)"/>
+    <circle cx="900" cy="520" r="230" fill="url(#halo)"/>
+  </g>
+  <g fill="#8F4213">
+    <path d="M230 640c0 30 30 50 70 50s70-20 70-50z"/>
+    <path d="M520 630c0 34 36 56 80 56s80-22 80-56z"/>
+    <path d="M830 640c0 30 30 50 70 50s70-20 70-50z"/>
+  </g>
+  <g fill="#B5551A">
+    <ellipse cx="300" cy="640" rx="70" ry="14"/>
+    <ellipse cx="600" cy="630" rx="80" ry="16"/>
+    <ellipse cx="900" cy="640" rx="70" ry="14"/>
+  </g>
+  <g fill="url(#flame)">
+    <path d="M300 540c-22 36-24 66 0 92 24-26 22-56 0-92z"/>
+    <path d="M600 516c-26 42-28 76 0 106 28-30 26-64 0-106z"/>
+    <path d="M900 540c-22 36-24 66 0 92 24-26 22-56 0-92z"/>
+  </g>
+  <g fill="#F3C98B" opacity="0.12">
+    <ellipse cx="300" cy="720" rx="120" ry="18"/>
+    <ellipse cx="600" cy="720" rx="140" ry="20"/>
+    <ellipse cx="900" cy="720" rx="120" ry="18"/>
+  </g>
+</svg>

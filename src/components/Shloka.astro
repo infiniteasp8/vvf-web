@@ -1,0 +1,63 @@
+---
+interface Props {
+  deva: string;
+  iast?: string;
+  translation: string;
+  note?: string;
+  tone?: 'paper' | 'paper-2' | 'night';
+  /** Show the breathing ॐ watermark behind the verse. */
+  om?: boolean;
+  compact?: boolean;
+}
+const {
+  deva,
+  iast,
+  translation,
+  note,
+  tone = 'paper-2',
+  om = false,
+  compact = false,
+} = Astro.props;
+const night = tone === 'night';
+const bg = tone === 'night' ? 'night-bg' : tone === 'paper-2' ? 'bg-paper-2' : 'bg-paper';
+---
+
+<section class={`relative overflow-hidden ${bg} ${compact ? 'py-14' : 'py-20 lg:py-28'}`}>
+  {om && (
+    <span
+      aria-hidden="true"
+      class={`breathe t-deva pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[22rem] leading-none select-none ${night ? 'text-amber' : 'text-kesari-deep'}`}
+    >
+      ॐ
+    </span>
+  )}
+  <div class="page relative">
+    <figure class="reveal mx-auto max-w-3xl text-center">
+      <span
+        aria-hidden="true"
+        class={`t-deva block text-3xl ${night ? 'text-amber' : 'text-kesari-deep'}`}
+      >
+        ॥
+      </span>
+      <blockquote class="mt-4">
+        <p class={`t-deva text-2xl md:text-3xl ${night ? 'text-paper' : 'text-ink'}`} lang="sa">
+          {deva}
+        </p>
+        {iast && (
+          <p
+            class={`t-iast mt-4 text-lg ${night ? 'text-amber' : 'text-kesari-deep'}`}
+            lang="sa-Latn"
+          >
+            {iast}
+          </p>
+        )}
+        <p class={`t-lede mt-5 ${night ? 'text-paper/85' : 'text-ink-2'}`}>{translation}</p>
+      </blockquote>
+      {note && (
+        <figcaption class={`t-small mt-6 ${night ? 'text-paper/60' : 'text-ink-2'}`}>
+          {note}
+        </figcaption>
+      )}
+    </figure>
+  </div>
+</section>

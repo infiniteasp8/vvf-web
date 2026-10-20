@@ -1,0 +1,15 @@
+{
+  "order": 1,
+  "date": "2026-06-20",
+  "kicker": { "en": "A beginning", "hi": "एक शुरुआत", "sa": "एकः आरम्भः" },
+  "title": {
+    "en": "A new student's first morning",
+    "hi": "एक नए विद्यार्थी की पहली सुबह",
+    "sa": "नूतनछात्रस्य प्रथमं प्रातः"
+  },
+  "body": {
+    "en": "He is seven. He has never been away from home. By the end of the week he will know the first line by heart, and he will not remember a time he did not.",
+    "hi": "वह सात साल का है। घर से कभी दूर नहीं रहा। सप्ताह के अंत तक उसे पहली पंक्ति कंठस्थ होगी, और उसे वह समय याद नहीं रहेगा जब नहीं थी।",
+    "sa": "सः सप्तवर्षीयः। गृहात् कदापि दूरं न स्थितः। सप्ताहान्ते सः प्रथमां पङ्क्तिं कण्ठस्थां ज्ञास्यति, तं च कालं न स्मरिष्यति यदा न जानाति स्म।"
+  }
+}

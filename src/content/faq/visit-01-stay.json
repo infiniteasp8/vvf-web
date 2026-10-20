@@ -1,0 +1,14 @@
+{
+  "page": "visit",
+  "order": 1,
+  "question": {
+    "en": "Can I stay overnight?",
+    "hi": "क्या मैं रात में रुक सकता/सकती हूँ?",
+    "sa": "किं रात्रौ स्थातुं शक्नोमि?"
+  },
+  "answer": {
+    "en": "Sometimes, and simply. Ask when you write. A guest who stays the night sees the evening fire and the dawn recitation both, which is the whole day in two hours.",
+    "hi": "कभी-कभी, और सादगी से। लिखते समय पूछ लीजिए। जो अतिथि रात रुकता है वह सायं अग्नि और प्रातः पाठ दोनों देखता है, यानी दो घंटों में पूरा दिन।",
+    "sa": "कदाचित्, सरलं च। लिखनसमये पृच्छत। यः अतिथिः रात्रौ तिष्ठति सः सायम् अग्निं प्रातःपाठं च उभयं पश्यति, यत् द्वयोः होरयोः सम्पूर्णं दिनम्।"
+  }
+}

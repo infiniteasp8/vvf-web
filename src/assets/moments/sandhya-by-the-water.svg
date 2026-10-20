@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t">
+  <title id="t">Sandhyā by the water</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1E9D8"/>
+      <stop offset="0.6" stop-color="#F3C98B"/>
+      <stop offset="1" stop-color="#E9A866"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9A866"/>
+      <stop offset="0.3" stop-color="#C9B995"/>
+      <stop offset="1" stop-color="#1E2A3F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="600" cy="520" r="110" fill="#B5551A"/>
+  <rect y="520" width="1200" height="380" fill="url(#water)"/>
+  <g fill="#F3C98B" opacity="0.6">
+    <rect x="520" y="540" width="160" height="6" rx="3"/>
+    <rect x="470" y="568" width="260" height="6" rx="3"/>
+    <rect x="540" y="600" width="120" height="5" rx="3"/>
+    <rect x="430" y="640" width="340" height="5" rx="3"/>
+    <rect x="560" y="690" width="80" height="4" rx="2"/>
+    <rect x="380" y="740" width="440" height="4" rx="2"/>
+  </g>
+  <path d="M0 520h1200v18c-200 10-420-6-620 2S180 540 0 532z" fill="#5A4E44" opacity="0.5"/>
+  <g fill="#1F1A17" opacity="0.92">
+    <circle cx="300" cy="470" r="30"/>
+    <path d="M250 740V530c0-24 18-36 50-36s50 12 50 36v210z"/>
+    <path d="M292 560c-30 20-40 50-30 70 20-6 40-30 44-70z"/>
+    <path d="M308 560c30 20 40 50 30 70-20-6-40-30-44-70z"/>
+  </g>
+  <g fill="#1F1A17" opacity="0.18">
+    <path d="M250 740v120c0 10 100 10 100 0V740z"/>
+  </g>
+</svg>

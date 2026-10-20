@@ -1,0 +1,19 @@
+{
+  "kind": "photo",
+  "featured": true,
+  "order": 5,
+  "date": "2026-10-19",
+  "tone": "night",
+  "title": { "en": "Lamps at dusk", "hi": "गोधूलि के दीपक", "sa": "गोधूलौ दीपाः" },
+  "caption": {
+    "en": "The day closes as it began: fire and sound.",
+    "hi": "दिन वैसे ही समाप्त होता है जैसे शुरू हुआ था: अग्नि और स्वर।",
+    "sa": "दिनं तथैव समाप्यते यथा आरब्धम्: अग्निः स्वरः च।"
+  },
+  "alt": {
+    "en": "Three oil lamps burning in a row against a deep blue evening",
+    "hi": "गहरी नीली शाम में एक पंक्ति में जलते तीन तेल के दीपक",
+    "sa": "गभीरनीलसायंकाले पङ्क्तौ ज्वलन्तः त्रयः तैलदीपाः"
+  },
+  "image": "../../assets/moments/lamps-at-dusk.svg"
+}

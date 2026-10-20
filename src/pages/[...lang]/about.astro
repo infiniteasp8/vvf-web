@@ -1,0 +1,111 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localeStaticPaths, localePath, type Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { breadcrumbJsonLd, webPageJsonLd } from '@/lib/seo';
+import PageHero from '@/components/PageHero.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import Shloka from '@/components/Shloka.astro';
+import Icon from '@/components/Icon.astro';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const locale = Astro.props.locale as Locale;
+const t = getMessages(locale);
+const a = t.about;
+const siteUrl = Astro.site!;
+const path = '/about/';
+---
+
+<BaseLayout
+  locale={locale}
+  title={a.meta.title}
+  description={a.meta.description}
+  path={path}
+  ogImage="/og/about.png"
+  current="about"
+  jsonLd={[
+    webPageJsonLd(siteUrl, locale, { path, title: a.meta.title, description: a.meta.description }),
+    breadcrumbJsonLd(siteUrl, locale, [
+      { name: t.common.home, path: '/' },
+      { name: t.common.nav.about, path },
+    ]),
+  ]}
+>
+  <PageHero
+    locale={locale}
+    kicker={a.hero.kicker}
+    title={a.hero.h1}
+    lede={a.hero.lede}
+    crumb={{ name: t.common.nav.about, path }}
+  />
+
+  <section class="page py-16 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+      <SectionHead kicker={a.what.kicker} title={a.what.h2} />
+      <div class="prose-vvf t-lede reveal d1 text-ink-2">
+        {a.what.body.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-paper-2 py-16 lg:py-24">
+    <div class="page grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+      <SectionHead kicker={a.free.kicker} title={a.free.h2} />
+      <div class="prose-vvf t-lede reveal d1 text-ink-2">
+        {a.free.body.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="page py-16 lg:py-24">
+    <SectionHead kicker={a.beliefs.kicker} title={a.beliefs.h2} />
+    <ol class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2">
+      {a.beliefs.items.map((item, i) => (
+        <li class={`keep reveal border-t border-line pt-6 ${i ? `d${i}` : ''}`}>
+          <span class="num" aria-hidden="true">
+            {['१', '२', '३', '४'][i]}
+          </span>
+          <h3 class="t-h3 mt-4 text-ink">{item.title}</h3>
+          <p class="mt-3 text-ink-2">{item.body}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="bg-paper-2 py-16 lg:py-24">
+    <div class="page">
+      <SectionHead kicker={a.help.kicker} title={a.help.h2} />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {a.help.items.map((item, i) => (
+          <article class={`reveal card lift flex flex-col p-6 ${i ? `d${i}` : ''}`}>
+            <h3 class="t-h3 text-ink">{item.title}</h3>
+            <p class="mt-3 flex-1 text-ink-2">{item.body}</p>
+            <a
+              href={localePath(locale, item.href)}
+              class="nl mt-5 inline-flex w-fit items-center gap-2 text-kesari-deep"
+            >
+              {item.cta}
+              <Icon name="arrow-right" size={16} />
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Shloka
+    deva={a.closing.deva}
+    iast={a.closing.iast}
+    translation={a.closing.translation}
+    note={a.closing.note}
+    tone="paper"
+    om
+  />
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import type { Locale } from '@/i18n';
+import Breadcrumbs from './Breadcrumbs.astro';
+
+interface Props {
+  locale: Locale;
+  kicker: string;
+  title: string;
+  lede: string;
+  crumb: { name: string; path: string };
+  tone?: 'paper' | 'night';
+  /** Wider layout with an aside column (for art or a card). */
+  withAside?: boolean;
+}
+const { locale, kicker, title, lede, crumb, tone = 'paper', withAside = false } = Astro.props;
+const night = tone === 'night';
+---
+
+<section class={`${night ? 'night-bg' : 'paper-bg'} pt-10 pb-14 lg:pt-16 lg:pb-20`}>
+  <div class={`page grid gap-10 ${withAside ? 'lg:grid-cols-[1.3fr_1fr] lg:items-center' : ''}`}>
+    <div class="max-w-3xl">
+      <div class="rise">
+        <Breadcrumbs locale={locale} items={[crumb]} tone={tone} />
+      </div>
+      <p class={`t-eyebrow rise d1 mt-6 ${night ? 'text-amber' : 'text-kesari-deep'}`}>{kicker}</p>
+      <h1 class={`t-display rise d2 mt-4 ${night ? 'text-paper' : 'text-ink'}`}>{title}</h1>
+      <p class={`t-lede rise d3 mt-6 max-w-2xl ${night ? 'text-paper/85' : 'text-ink-2'}`}>
+        {lede}
+      </p>
+      <div class="rise d4 mt-8">
+        <slot name="actions" />
+      </div>
+    </div>
+    {withAside && (
+      <div class="rise d3">
+        <slot name="aside" />
+      </div>
+    )}
+  </div>
+</section>

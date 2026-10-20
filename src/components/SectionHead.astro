@@ -1,0 +1,27 @@
+---
+interface Props {
+  kicker: string;
+  title: string;
+  lede?: string;
+  tone?: 'paper' | 'night';
+  align?: 'left' | 'center';
+  as?: 'h2' | 'h3';
+  class?: string;
+}
+const {
+  kicker,
+  title,
+  lede,
+  tone = 'paper',
+  align = 'left',
+  as: Tag = 'h2',
+  class: className = '',
+} = Astro.props;
+const night = tone === 'night';
+---
+
+<div class={`reveal ${align === 'center' ? 'mx-auto text-center' : ''} max-w-3xl ${className}`}>
+  <p class={`t-eyebrow ${night ? 'text-amber' : 'text-kesari-deep'}`}>{kicker}</p>
+  <Tag class={`t-h2 mt-3 ${night ? 'text-paper' : 'text-ink'}`}>{title}</Tag>
+  {lede && <p class={`t-lede mt-5 ${night ? 'text-paper/85' : 'text-ink-2'}`}>{lede}</p>}
+</div>

@@ -1,0 +1,18 @@
+{
+  "kind": "photo",
+  "featured": true,
+  "order": 4,
+  "date": "2026-08-20",
+  "title": { "en": "The midday meal", "hi": "मध्याह्न भोजन", "sa": "मध्याह्नभोजनम्" },
+  "caption": {
+    "en": "Cooked by the students, for the students. Everyone eats together on the floor.",
+    "hi": "विद्यार्थियों द्वारा, विद्यार्थियों के लिए पकाया। सब ज़मीन पर साथ खाते हैं।",
+    "sa": "छात्रैः छात्रेभ्यः पक्वम्। सर्वे भूमौ सह भुञ्जते।"
+  },
+  "alt": {
+    "en": "Rows of leaf plates with rice and dal laid out on a floor, a brass pot at the end of the row",
+    "hi": "फ़र्श पर पंक्तियों में रखी पत्तल थालियाँ, चावल और दाल, पंक्ति के अंत में पीतल का बर्तन",
+    "sa": "भूमौ पङ्क्तिषु स्थापितानि पर्णपात्राणि, ओदनः दालः च, पङ्क्त्यन्ते पित्तलपात्रम्"
+  },
+  "image": "../../assets/moments/midday-meal.svg"
+}

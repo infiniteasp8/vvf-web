@@ -1,0 +1,41 @@
+---
+import type { Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const l = getMessages(locale).donate.letter;
+---
+
+<section id="letter" class="page scroll-mt-24 py-16 lg:py-24">
+  <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+    <div class="reveal lg:sticky lg:top-28 lg:self-start">
+      <span class="t-deva text-5xl text-paper-3" aria-hidden="true">
+        ॐ
+      </span>
+      <p class="t-eyebrow mt-4 text-kesari-deep">{l.kicker}</p>
+      <h2 class="t-h2 mt-3 text-ink">{l.h2}</h2>
+      <p class="t-lede mt-4 text-ink-2">{l.lede}</p>
+    </div>
+    <div class="reveal d1 rounded-md border border-line bg-paper-2 p-7 md:p-12">
+      <span class="t-deva text-3xl text-kesari" aria-hidden="true">
+        ॥
+      </span>
+      <p class="t-deva mt-4 text-2xl text-ink" lang="hi">
+        {l.salutation}
+      </p>
+      <div class="prose-vvf t-lede mt-6 text-ink">
+        {l.paragraphs.map((para) => (
+          <p>{para}</p>
+        ))}
+      </div>
+      <p class="t-lede mt-8 text-ink-2">{l.signoff}</p>
+      <p class="font-[family-name:var(--font-display)] text-xl text-ink">{l.signature}</p>
+      <p class="t-deva mt-8 border-t border-line pt-5 text-xl text-kesari-deep" lang="sa">
+        {l.closing}
+      </p>
+    </div>
+  </div>
+</section>

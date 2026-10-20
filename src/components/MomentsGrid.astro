@@ -1,0 +1,126 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+  items: Array<CollectionEntry<'moments'>>;
+  /** Show the date under each caption (used on the Moments page). */
+  showDate?: boolean;
+}
+const { locale, items, showDate = false } = Astro.props;
+const t = getMessages(locale);
+const m = t.moments;
+const fmt = new Intl.DateTimeFormat(locale === 'en' ? 'en-IN' : 'hi-IN', {
+  year: 'numeric',
+  month: 'long',
+});
+
+/** Turn a YouTube or Vimeo watch URL into a privacy-friendly embed URL. */
+function embedUrl(url: string): string | null {
+  const yt = url.match(/(?:youtu\.be\/|v=|shorts\/)([\w-]{6,})/);
+  if (yt) return `https://www.youtube-nocookie.com/embed/${yt[1]}`;
+  const vm = url.match(/vimeo\.com\/(\d+)/);
+  if (vm) return `https://player.vimeo.com/video/${vm[1]}?dnt=1`;
+  return null;
+}
+---
+
+<ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-moments>
+  {items.map((entry, i) => {
+    const data = entry.data;
+    const film = data.kind === 'film';
+    const embed = data.video ? embedUrl(data.video) : null;
+    const span = film ? 'sm:col-span-2 sm:row-span-2' : '';
+    return (
+      <li class={`reveal ${span}`} style={`--d: ${((i % 3) * 0.1).toFixed(1)}s`}>
+        <figure class="frame h-full">
+          <div class={film ? 'aspect-[16/10] sm:h-full' : 'aspect-[4/3]'}>
+            {film && embed ? (
+              <div class="film" data-film>
+                <Image
+                  src={data.image}
+                  alt={data.alt[locale]}
+                  class="art"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <button type="button" class="film-play" data-film-play data-src={embed}>
+                  <span class="play">
+                    <Icon name="play" size={28} />
+                  </span>
+                  <span class="sr-only">{m.watch}</span>
+                </button>
+              </div>
+            ) : (
+              <Image
+                src={data.image}
+                alt={data.alt[locale]}
+                class="art"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+          </div>
+          {film && !embed && (
+            <span
+              class="pointer-events-none absolute inset-0 grid place-items-center"
+              aria-hidden="true"
+            >
+              <span class="play">
+                <Icon name="play" size={28} />
+              </span>
+            </span>
+          )}
+          <figcaption class="cap">
+            {film && (
+              <span class="t-eyebrow mb-1 block text-amber">
+                {m.film}
+                {data.duration ? ` · ${data.duration}` : ''}
+                {!embed ? ` · ${m.filmSoon}` : ''}
+              </span>
+            )}
+            <span class="block font-[family-name:var(--font-display)] text-xl leading-snug">
+              {data.title[locale]}
+            </span>
+            {data.caption && (
+              <span class="mt-1 block text-sm text-paper/85">{data.caption[locale]}</span>
+            )}
+            {showDate && (
+              <span class="t-small mt-2 block text-paper/60">
+                {m.dateLabel} {fmt.format(new Date(data.date))}
+              </span>
+            )}
+          </figcaption>
+        </figure>
+      </li>
+    );
+  })}
+</ul>
+
+<style>
+  .film {
+    position: relative;
+    height: 100%;
+  }
+  .film-play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .film :global(iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>

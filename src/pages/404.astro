@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { locales, localeMeta, localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+
+const t = getMessages('en');
+---
+
+<BaseLayout
+  locale="en"
+  title={`${t.common.notFound.title} · ${t.common.siteName}`}
+  description={t.common.notFound.body}
+  path="/404/"
+>
+  <section class="paper-bg py-24 lg:py-32">
+    <div class="page max-w-2xl">
+      <p class="t-deva rise text-5xl text-paper-3" aria-hidden="true">
+        ॥
+      </p>
+      <h1 class="t-display rise d1 mt-4 text-ink">{t.common.notFound.title}</h1>
+      <p class="t-lede rise d2 mt-6 text-ink-2">{t.common.notFound.body}</p>
+      <div class="rise d3 mt-8 flex flex-wrap gap-3">
+        {locales.map((code) => (
+          <a
+            href={localePath(code, '/')}
+            class={code === 'en' ? 'btn btn-primary' : 'btn btn-ghost'}
+            hreflang={code}
+            lang={localeMeta[code].htmlLang}
+          >
+            {getMessages(code).common.notFound.cta}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* A 404 is served at any path, so the page carries no canonical of its own. */
+</style>

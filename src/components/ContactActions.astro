@@ -1,0 +1,39 @@
+---
+import type { Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { site } from '@/data/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+  tone?: 'paper' | 'night';
+}
+const { locale, tone = 'paper' } = Astro.props;
+const t = getMessages(locale);
+const whatsappHref = site.contact.whatsapp
+  ? `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(t.common.whatsapp.text)}`
+  : '';
+const primary = tone === 'paper' ? 'btn-primary' : 'btn-paper';
+const ghost = tone === 'paper' ? 'btn-ghost' : 'btn-outline-paper';
+---
+
+<div class="flex flex-wrap gap-3">
+  {whatsappHref && (
+    <a href={whatsappHref} class={`btn ${primary}`} rel="noopener">
+      <Icon name="whatsapp" size={18} />
+      {t.common.whatsapp.label}
+    </a>
+  )}
+  {site.contact.mapUrl && (
+    <a href={site.contact.mapUrl} class={`btn ${ghost}`} rel="noopener">
+      <Icon name="map" size={18} />
+      {t.common.contact.directions}
+    </a>
+  )}
+  {site.contact.email && (
+    <a href={`mailto:${site.contact.email}`} class={`btn ${ghost}`}>
+      <Icon name="mail" size={18} />
+      {t.common.contact.write}
+    </a>
+  )}
+</div>

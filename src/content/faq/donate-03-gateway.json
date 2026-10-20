@@ -1,0 +1,14 @@
+{
+  "page": "donate",
+  "order": 3,
+  "question": {
+    "en": "Why is there no payment gateway?",
+    "hi": "कोई पेमेंट गेटवे क्यों नहीं है?",
+    "sa": "किमर्थं भुगतानद्वारं नास्ति?"
+  },
+  "answer": {
+    "en": "Because a gateway costs money and sits between you and the Gurukul. UPI and bank transfer are free, and your gift arrives whole.",
+    "hi": "क्योंकि गेटवे पर पैसा लगता है और वह आपके और गुरुकुल के बीच में बैठता है। UPI और बैंक हस्तांतरण निःशुल्क हैं, और आपका दान पूरा पहुँचता है।",
+    "sa": "यतः द्वारं धनं व्ययति, भवतां गुरुकुलस्य च मध्ये तिष्ठति। UPI बैङ्क-स्थानान्तरणं च निःशुल्कम्, भवतां दानं च सम्पूर्णं प्राप्नोति।"
+  }
+}

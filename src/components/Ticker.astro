@@ -1,0 +1,22 @@
+---
+interface Props {
+  items: Array<{ time: string; text: string }>;
+}
+const { items } = Astro.props;
+---
+
+<div class="ticker overflow-hidden border-y border-line bg-paper-2 py-3" aria-hidden="true">
+  <div class="ticker-track">
+    {[0, 1].map(() => (
+      <ul class="flex shrink-0 items-center gap-10 pr-10">
+        {items.map((item) => (
+          <li class="t-ui flex items-center gap-3 whitespace-nowrap text-ink-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-kesari" />
+            <span class="font-semibold text-ink">{item.time}</span>
+            <span>{item.text}</span>
+          </li>
+        ))}
+      </ul>
+    ))}
+  </div>
+</div>

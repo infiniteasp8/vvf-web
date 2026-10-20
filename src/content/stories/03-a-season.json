@@ -1,0 +1,15 @@
+{
+  "order": 3,
+  "date": "2026-08-10",
+  "kicker": { "en": "A season", "hi": "एक ऋतु", "sa": "एका ऋतुः" },
+  "title": {
+    "en": "Monsoon in the Gurukul",
+    "hi": "गुरुकुल में मानसून",
+    "sa": "गुरुकुले वर्षाकालः"
+  },
+  "body": {
+    "en": "The rain on the roof is loud enough to drown the recitation, so the students recite louder. The garden has never looked greener.",
+    "hi": "छत पर बारिश इतनी तेज़ है कि पाठ डूब जाए, इसलिए विद्यार्थी और ज़ोर से पढ़ते हैं। बगीचा इतना हरा पहले कभी नहीं दिखा।",
+    "sa": "छदिषि वर्षा तावत् उच्चा यत् पाठः मज्जेत्, अतः छात्राः उच्चतरं पठन्ति। उद्यानं कदापि एतावत् हरितं न दृष्टम्।"
+  }
+}

@@ -1,0 +1,33 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import ContactActions from './ContactActions.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const v = getMessages(locale).home.visit;
+---
+
+<section id="visit" class="scroll-mt-24 bg-paper-2 py-16 lg:py-24">
+  <div class="page grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
+    <div class="reveal max-w-2xl">
+      <p class="t-eyebrow text-kesari-deep">{v.kicker}</p>
+      <h2 class="t-h2 mt-3 text-ink">{v.h2}</h2>
+      <p class="t-lede mt-5 text-ink-2">{v.body}</p>
+      <a
+        href={localePath(locale, '/visit/')}
+        class="nl mt-5 inline-flex items-center gap-2 text-kesari-deep"
+      >
+        {v.cta}
+        <Icon name="arrow-right" size={16} />
+      </a>
+    </div>
+    <div class="reveal d2">
+      <ContactActions locale={locale} />
+    </div>
+  </div>
+</section>

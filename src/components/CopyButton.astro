@@ -1,0 +1,36 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  /** Text placed on the clipboard. */
+  text: string;
+  label: string;
+  doneLabel: string;
+  /** Visual style. "icon" shows only the icon with the label for screen readers. */
+  variant?: 'outline-paper' | 'ghost' | 'icon-paper' | 'icon-ink';
+  class?: string;
+}
+const { text, label, doneLabel, variant = 'outline-paper', class: className = '' } = Astro.props;
+const iconOnly = variant.startsWith('icon');
+const style =
+  variant === 'outline-paper'
+    ? 'btn-outline-paper'
+    : variant === 'ghost'
+      ? 'btn-ghost'
+      : variant === 'icon-paper'
+        ? 'btn-outline-paper btn-icon'
+        : 'btn-ghost btn-icon';
+---
+
+<button
+  type="button"
+  class={`btn btn-sm ${style} ${className}`}
+  data-copy={text}
+  data-label={label}
+  data-label-done={doneLabel}
+  aria-label={iconOnly ? label : undefined}
+>
+  <Icon name="copy" size={18} class="copy-icon" />
+  <Icon name="check" size={18} class="done-icon hidden" />
+  {iconOnly ? null : <span data-copy-label>{label}</span>}
+</button>

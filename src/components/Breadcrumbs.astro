@@ -1,0 +1,35 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+
+interface Props {
+  locale: Locale;
+  items: Array<{ name: string; path: string }>;
+  tone?: 'paper' | 'night';
+}
+const { locale, items, tone = 'paper' } = Astro.props;
+const t = getMessages(locale);
+const all = [{ name: t.common.home, path: '/' }, ...items];
+const color = tone === 'paper' ? 'text-ink-2' : 'text-paper/70';
+---
+
+<nav aria-label={t.common.breadcrumbs} class={`t-small ${color}`}>
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    {all.map((item, i) => {
+      const last = i === all.length - 1;
+      return (
+        <li class="flex items-center gap-2">
+          {last ? (
+            <span aria-current="page">{item.name}</span>
+          ) : (
+            <a href={localePath(locale, item.path)} class="hover:underline">
+              {item.name}
+            </a>
+          )}
+          {!last && <span aria-hidden="true">·</span>}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

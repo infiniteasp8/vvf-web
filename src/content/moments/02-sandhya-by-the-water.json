@@ -1,0 +1,18 @@
+{
+  "kind": "photo",
+  "featured": true,
+  "order": 2,
+  "date": "2026-06-14",
+  "title": { "en": "Sandhyā by the water", "hi": "जल के किनारे संध्या", "sa": "जलतीरे सन्ध्या" },
+  "caption": {
+    "en": "The evening prayer, offered where the river is quiet.",
+    "hi": "सायं प्रार्थना, वहाँ जहाँ नदी शांत है।",
+    "sa": "सायंप्रार्थना, यत्र नदी शान्ता।"
+  },
+  "alt": {
+    "en": "A still river at dusk with the sun low on the horizon and a figure standing in the shallows",
+    "hi": "गोधूलि में शांत नदी, क्षितिज पर नीचा सूर्य और उथले जल में खड़ी एक आकृति",
+    "sa": "गोधूलौ शान्ता नदी, क्षितिजे नीचः सूर्यः, अल्पजले स्थिता एका आकृतिः"
+  },
+  "image": "../../assets/moments/sandhya-by-the-water.svg"
+}

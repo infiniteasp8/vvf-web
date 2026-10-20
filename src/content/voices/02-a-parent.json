@@ -1,0 +1,14 @@
+{
+  "order": 2,
+  "quote": {
+    "en": "We were afraid he would be cut off from the world. He came home speaking three languages, folding his own clothes, and asking when he could go back.",
+    "hi": "हमें डर था कि वह दुनिया से कट जाएगा। वह घर लौटा तो तीन भाषाएँ बोलता था, अपने कपड़े ख़ुद तह करता था, और पूछता था कि वापस कब जा सकता है।",
+    "sa": "वयम् अबिभीम यत् सः लोकात् विच्छिन्नः भविष्यति। सः गृहम् आगतः तिस्रः भाषाः भाषमाणः, स्ववस्त्राणि स्वयं सञ्चिन्वन्, पृच्छन् च कदा प्रतिगन्तुं शक्नोति इति।"
+  },
+  "who": { "en": "A parent", "hi": "एक अभिभावक", "sa": "एकः पिता" },
+  "where": {
+    "en": "A village a day's journey away",
+    "hi": "एक दिन की दूरी पर बसा गाँव",
+    "sa": "एकदिनयात्रादूरस्थः ग्रामः"
+  }
+}

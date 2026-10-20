@@ -1,0 +1,18 @@
+{
+  "kind": "photo",
+  "featured": true,
+  "order": 6,
+  "date": "2026-09-05",
+  "title": { "en": "Under the old tree", "hi": "पुराने पेड़ के नीचे", "sa": "पुराणवृक्षस्य अधः" },
+  "caption": {
+    "en": "Revision in pairs, in the shade, on the hottest afternoon of the year.",
+    "hi": "छाँव में, जोड़ियों में पुनरावृत्ति, वर्ष की सबसे गर्म दोपहर में।",
+    "sa": "छायायां युग्मेषु पुनरावृत्तिः, वर्षस्य उष्णतमे अपराह्णे।"
+  },
+  "alt": {
+    "en": "A wide old tree with a stone platform at its base and two figures sitting in its shade",
+    "hi": "एक विशाल पुराना पेड़, जड़ में पत्थर का चबूतरा और छाँव में बैठी दो आकृतियाँ",
+    "sa": "विशालः पुराणः वृक्षः, मूले पाषाणवेदिका, छायायाम् उपविष्टे द्वे आकृती"
+  },
+  "image": "../../assets/moments/under-the-old-tree.svg"
+}

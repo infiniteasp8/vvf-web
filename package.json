@@ -1,0 +1,57 @@
+{
+  "name": "vvf-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ved Vidyalaya Foundation — trilingual static website (English, Hindi, Sanskrit)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "validate:html": "html-validate \"dist/**/*.html\"",
+    "brand": "node scripts/brand.mjs",
+    "icons": "node scripts/icons.mjs",
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "ci": "npm run check && npm run lint && npm run format:check && npm run test && npm run build && npm run validate:html && npm run test:e2e"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.1",
+    "@fontsource/eb-garamond": "^5.3.0",
+    "@fontsource/mukta": "^5.3.0",
+    "@fontsource/tiro-devanagari-hindi": "^5.3.0",
+    "@fontsource/tiro-devanagari-sanskrit": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^5.18.2",
+    "qrcode": "^1.5.4",
+    "satori": "^0.63.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.11",
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.5",
+    "eslint": "^9.39.5",
+    "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "html-validate": "^10.17.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^3.2.7"
+  }
+}

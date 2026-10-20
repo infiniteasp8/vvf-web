@@ -1,0 +1,14 @@
+{
+  "page": "visit",
+  "order": 2,
+  "question": {
+    "en": "May I bring my children?",
+    "hi": "क्या मैं अपने बच्चों को ला सकता/सकती हूँ?",
+    "sa": "किं स्वबालकान् आनेतुं शक्नोमि?"
+  },
+  "answer": {
+    "en": "Yes. Children are often the visitors who understand the place fastest. By the midday meal they are usually sitting with the students.",
+    "hi": "हाँ। बच्चे अक्सर वे आगंतुक होते हैं जो इस जगह को सबसे जल्दी समझ लेते हैं। मध्याह्न भोजन तक वे प्रायः विद्यार्थियों के साथ बैठे होते हैं।",
+    "sa": "आम्। बालकाः प्रायः ते आगन्तुकाः ये स्थानं शीघ्रतमं बुध्यन्ते। मध्याह्नभोजनं यावत् ते प्रायः छात्रैः सह उपविष्टाः भवन्ति।"
+  }
+}

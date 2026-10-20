@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Locale } from '@/i18n';
+import SectionHead from './SectionHead.astro';
+
+interface Props {
+  locale: Locale;
+  items: Array<CollectionEntry<'stories'>>;
+  kicker: string;
+  title: string;
+  lede?: string;
+}
+const { locale, items, kicker, title, lede } = Astro.props;
+---
+
+<section id="stories" class="page scroll-mt-24 py-16 lg:py-24">
+  <SectionHead kicker={kicker} title={title} lede={lede} />
+  <div class="mt-12 grid gap-6 md:grid-cols-3">
+    {items.map((entry, i) => (
+      <article class={`reveal card lift p-6 md:p-7 ${i ? `d${i}` : ''}`}>
+        <p class="t-eyebrow text-kesari-deep">{entry.data.kicker[locale]}</p>
+        <h3 class="t-h3 mt-3 text-ink">{entry.data.title[locale]}</h3>
+        <p class="mt-3 text-ink-2">{entry.data.body[locale]}</p>
+      </article>
+    ))}
+  </div>
+</section>

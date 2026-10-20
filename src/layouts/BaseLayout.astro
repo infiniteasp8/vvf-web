@@ -1,0 +1,88 @@
+---
+import '@fontsource/eb-garamond/400.css';
+import '@fontsource/eb-garamond/500.css';
+import '@fontsource/tiro-devanagari-hindi';
+import '@fontsource/tiro-devanagari-sanskrit';
+import '@fontsource/mukta/500.css';
+import '@fontsource/mukta/600.css';
+import '@/styles/global.css';
+
+// Hashed URLs of the display font per language, preloaded so headlines settle quickly.
+import garamondUrl from '@fontsource/eb-garamond/files/eb-garamond-latin-500-normal.woff2?url';
+import tiroHindiUrl from '@fontsource/tiro-devanagari-hindi/files/tiro-devanagari-hindi-devanagari-400-normal.woff2?url';
+import tiroSanskritUrl from '@fontsource/tiro-devanagari-sanskrit/files/tiro-devanagari-sanskrit-devanagari-400-normal.woff2?url';
+
+import type { Locale } from '@/i18n';
+import { localeMeta } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import Seo from '@/components/Seo.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import Header from '@/components/Header.astro';
+import type { NavKey } from '@/lib/nav';
+import Footer from '@/components/Footer.astro';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  /** Locale-less path of this page, e.g. "/donate/". */
+  path: string;
+  /** Path of the Open Graph image, e.g. "/og/donate.png". */
+  ogImage?: string;
+  jsonLd?: Array<Record<string, unknown>>;
+  current?: NavKey;
+  bodyClass?: string;
+}
+
+const {
+  locale,
+  title,
+  description,
+  path,
+  ogImage = '/og/home.png',
+  jsonLd = [],
+  current,
+  bodyClass = '',
+} = Astro.props;
+const meta = localeMeta[locale];
+const t = getMessages(locale);
+const displayFont =
+  locale === 'hi' ? tiroHindiUrl : locale === 'sa' ? tiroSanskritUrl : garamondUrl;
+---
+
+<!doctype html>
+<html lang={meta.htmlLang} class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+    <Seo locale={locale} title={title} description={description} path={path} ogImage={ogImage} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icons/favicon-48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="/icons/favicon-96.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#FAF6EE" />
+    <meta name="color-scheme" content="light" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {jsonLd.map((data) => (
+      <JsonLd data={data} />
+    ))}
+    <script>
+      import '@/scripts/main';
+    </script>
+  </head>
+  <body class={bodyClass}>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-sm focus:bg-ink focus:px-4 focus:py-2 focus:text-paper t-ui"
+    >
+      {t.common.skipToContent}
+    </a>
+    <Header locale={locale} path={path} current={current} />
+    <main id="main" tabindex="-1" class="outline-none">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

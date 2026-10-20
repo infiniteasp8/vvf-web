@@ -1,0 +1,19 @@
+{
+  "kind": "film",
+  "featured": true,
+  "order": 1,
+  "date": "2026-07-01",
+  "duration": "4 min",
+  "title": { "en": "The morning recitation", "hi": "प्रातः पाठ", "sa": "प्रातःपाठः" },
+  "caption": {
+    "en": "Two hours with the ācārya, before the sun has cleared the trees.",
+    "hi": "सूर्य के पेड़ों से ऊपर आने से पहले, आचार्य के साथ दो घंटे।",
+    "sa": "सूर्यः वृक्षान् अतिक्रामेत् ततः पूर्वम्, आचार्येण सह द्वौ होरौ।"
+  },
+  "alt": {
+    "en": "Students seated in rows on a verandah at dawn, reciting with their teacher",
+    "hi": "भोर में बरामदे पर पंक्तियों में बैठे विद्यार्थी, गुरु के साथ पाठ करते हुए",
+    "sa": "उषसि प्राङ्गणे पङ्क्तिषु उपविष्टाः छात्राः, गुरुणा सह पठन्तः"
+  },
+  "image": "../../assets/moments/morning-recitation.svg"
+}

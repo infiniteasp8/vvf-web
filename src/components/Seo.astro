@@ -1,0 +1,51 @@
+---
+import type { Locale } from '@/i18n';
+import { alternatesFor, localeMeta, localePath } from '@/i18n';
+import { absoluteUrl } from '@/lib/seo';
+import { site } from '@/data/site';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  path: string;
+  ogImage: string;
+  noindex?: boolean;
+}
+
+const { locale, title, description, path, ogImage, noindex = false } = Astro.props;
+const siteUrl = Astro.site ?? new URL('https://www.vedvidyalaya.org');
+const canonical = absoluteUrl(siteUrl, localePath(locale, path));
+const image = absoluteUrl(siteUrl, ogImage);
+const alternates = alternatesFor(path);
+const meta = localeMeta[locale];
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+{alternates.map((alt) => (
+  <link rel="alternate" hreflang={alt.hreflang} href={absoluteUrl(siteUrl, alt.path)} />
+))}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:locale" content={meta.ogLocale} />
+{alternates
+  .filter((alt) => alt.locale !== locale && alt.hreflang !== 'x-default')
+  .map((alt) => (
+    <meta property="og:locale:alternate" content={localeMeta[alt.locale].ogLocale} />
+  ))}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={site.name} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />

@@ -1,0 +1,60 @@
+---
+import type { Locale } from '@/i18n';
+import { getMessages, fill } from '@/i18n/messages';
+import { site } from '@/data/site';
+import { bankDetailsText, digitsOnly } from '@/lib/upi';
+import CopyButton from './CopyButton.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getMessages(locale);
+const b = t.common.bank;
+const rows = [
+  { label: b.accountName, value: site.bank.accountName, copy: site.bank.accountName },
+  {
+    label: b.accountNumber,
+    value: site.bank.accountNumber,
+    copy: digitsOnly(site.bank.accountNumber),
+  },
+  { label: b.ifsc, value: site.bank.ifsc, copy: site.bank.ifsc },
+  {
+    label: b.bank,
+    value: `${site.bank.bankName}, ${site.bank.branch}`,
+    copy: `${site.bank.bankName}, ${site.bank.branch}`,
+  },
+];
+---
+
+<div class="rounded-md border border-line-night bg-night-2/60 p-6 md:p-8">
+  <div class="flex flex-wrap items-start justify-between gap-4">
+    <div>
+      <h3 class="t-h3 text-paper">{b.title}</h3>
+      <p class="t-small mt-1 text-paper/60">{b.sub}</p>
+    </div>
+    <CopyButton
+      text={bankDetailsText(site.bank)}
+      label={t.common.copyAll}
+      doneLabel={t.common.copied}
+    />
+  </div>
+
+  <dl class="mt-6 divide-y divide-line-night border-y border-line-night">
+    {rows.map((row) => (
+      <div class="py-3">
+        <dt class="t-small text-paper/60">{row.label}</dt>
+        <dd class="mt-0.5 flex items-center justify-between gap-4">
+          <span class="min-w-0 font-ui text-lg text-paper select-all">{row.value}</span>
+          <CopyButton
+            text={row.copy}
+            label={fill(t.common.copyField, { field: row.label })}
+            doneLabel={t.common.copied}
+            variant="icon-paper"
+          />
+        </dd>
+      </div>
+    ))}
+  </dl>
+  <p class="t-small mt-4 text-paper/60">{b.remark}</p>
+</div>

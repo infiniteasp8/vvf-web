@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "What a child learns · Ved Vidyalaya Foundation",
+    "description": "The Veda by heart, Sanskrit as a spoken language, a full modern school curriculum, and a way of living. How learning works in the Gurukul, from the first line to the years after."
+  },
+  "hero": {
+    "kicker": "Learning",
+    "h1": "One education, four strands.",
+    "lede": "A student here receives the Veda, Sanskrit, a full school education and a way of living, all at once and all from the same people. None of the four is an extra. Each one holds the others up."
+  },
+  "method": {
+    "kicker": "How a lesson works",
+    "h2": "Nothing is written down. Nothing is forgotten.",
+    "lede": "The method is older than paper and it still works better than paper for this one task: carrying a sound across generations without change.",
+    "steps": [
+      {
+        "title": "The teacher recites",
+        "body": "One line, at the natural pace, with every accent in place. The students listen. They do not look at a page, because there is no page."
+      },
+      {
+        "title": "The students repeat",
+        "body": "Twice, together. The ācārya hears a single wrong tone among a dozen voices and stops. The line is repeated until it is right, and then it is repeated again."
+      },
+      {
+        "title": "The line is turned",
+        "body": "The same words are recited in pairs, then in the krama order, then in the harder patterns. A line learned this way can be recalled from any point and cannot be quietly corrupted."
+      },
+      {
+        "title": "It is tested by ear",
+        "body": "Visiting scholars sit with the students and listen. There is no written examination for the Veda. There is only whether it is carried, whole, in a voice."
+      }
+    ]
+  },
+  "strands": {
+    "kicker": "The four strands",
+    "h2": "What a student learns, and why each part matters",
+    "items": [
+      {
+        "title": "The Veda, by heart",
+        "deva": "वेदपाठः",
+        "body": "Each student takes up a Veda and learns it over many years, exactly as it was received, with every svara. Morning and evening the verandah fills with it. By the time a student finishes, they carry in their voice something that passed in exactly this way through a hundred generations before them.",
+        "points": [
+          "Saṁhitā, pada and krama, each in its turn",
+          "Recitation with the ācārya morning and evening",
+          "Heard and tested by visiting scholars"
+        ]
+      },
+      {
+        "title": "Sanskrit, spoken",
+        "deva": "संस्कृतम्",
+        "body": "From the first week, Sanskrit is spoken in class and at the table. Grammar comes through Pāṇini, poetry through the great kāvyas, and in time the first steps into the śāstras. A language one can argue in, joke in and pray in is a language that stays alive.",
+        "points": [
+          "Spoken Sanskrit every day",
+          "Pāṇini, kāvya, and the beginnings of śāstra",
+          "Reading the texts, not only reciting them"
+        ]
+      },
+      {
+        "title": "A full school education",
+        "deva": "आधुनिकशिक्षा",
+        "body": "A Vedic education must leave every door open. Students study English, mathematics, science and computing through the school years, with the same care as the Veda. They leave able to teach, to earn, to study further and to choose their own path.",
+        "points": [
+          "English, mathematics, science and computing",
+          "A quiet library and a computer room",
+          "Guidance for the years after the Gurukul"
+        ]
+      },
+      {
+        "title": "A way of living",
+        "deva": "संस्कारः सेवा च",
+        "body": "Sandhyā at dawn and dusk, yoga and prāṇāyāma in the morning, the fire tended every day, the kitchen, garden and cows cared for by all. Discipline is not imposed here. It is absorbed, the way a language is, by living among people who have it.",
+        "points": [
+          "Yoga and prāṇāyāma each morning",
+          "Seva: kitchen, garden, goshala, library",
+          "Festivals kept as living tradition"
+        ]
+      }
+    ]
+  },
+  "leaves": {
+    "kicker": "What a student leaves with",
+    "h2": "A voice, a language, a schooling, and a way of carrying themselves",
+    "body": "Some of our students go on to teach, in Gurukuls or in schools. Some go to university. Some return to their villages to be the one person there who can lead a ceremony properly. All of them leave with something that cannot be taken away: a tradition carried whole in their own voice, and the quiet confidence of someone who has done one very hard thing well.",
+    "note": "Families who would like to know more about studying here are welcome to write to us. Admission is never about what a family can pay."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "siteName": "Ved Vidyalaya Foundation",
+  "siteNameNative": "वेद विद्यालय फाउंडेशन",
+  "tagline": "A living Gurukul",
+  "description": "A Gurukul that keeps the Vedic oral tradition alive and gives its students a full education, free of charge. Learn why it matters, see a day in the Gurukul, and help keep the voice alive.",
+  "skipToContent": "Skip to content",
+  "menu": "Menu",
+  "close": "Close",
+  "language": "Language",
+  "home": "Home",
+  "nav": {
+    "about": "Why",
+    "education": "Learning",
+    "life": "Gurukul life",
+    "moments": "Moments",
+    "donate": "Give",
+    "visit": "Visit"
+  },
+  "give": "Give",
+  "giveNow": "Give now",
+  "readMore": "Read more",
+  "copy": "Copy",
+  "copied": "Copied",
+  "copyAll": "Copy all details",
+  "copyField": "Copy {field}",
+  "arrival": {
+    "mantra": ["असतो", "मा", "सद्गमय", "।", "तमसो", "मा", "ज्योतिर्गमय", "।"],
+    "iast": "asato mā sadgamaya · tamaso mā jyotirgamaya",
+    "translation": "From the unreal, lead me to the real. From darkness, lead me to light.",
+    "skip": "Skip",
+    "replay": "Replay the arrival"
+  },
+  "upi": {
+    "title": "Give by UPI",
+    "lede": "Scan with any UPI app, or copy the ID and paste it in yours. Any amount is welcome.",
+    "idLabel": "UPI ID",
+    "qrAlt": "QR code to pay {name} through UPI",
+    "open": "Open any UPI app on your phone",
+    "desktopHint": "On a computer, scan the code with your phone. The name shown will be {name}."
+  },
+  "bank": {
+    "title": "Give by bank transfer",
+    "sub": "NEFT, IMPS, RTGS",
+    "accountName": "Account name",
+    "accountNumber": "Account number",
+    "ifsc": "IFSC",
+    "bank": "Bank and branch",
+    "remark": "Please use your own name as the remark, or the name of someone you are giving in memory of. We read every one."
+  },
+  "whatsapp": {
+    "label": "Message us on WhatsApp",
+    "text": "Namaste. I found the Ved Vidyalaya Foundation website and would like to get in touch."
+  },
+  "contact": {
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "directions": "Get directions",
+    "write": "Write to us"
+  },
+  "footer": {
+    "blurb": "A Gurukul that keeps the Vedic oral tradition alive and gives its students a full education, free of charge.",
+    "explore": "Explore",
+    "involved": "Get involved",
+    "contact": "Contact",
+    "why": "Why this matters",
+    "learning": "What a child learns",
+    "day": "A day in the Gurukul",
+    "moments": "Photographs and films",
+    "give": "Give",
+    "volunteer": "Volunteer or teach",
+    "visit": "Visit the Gurukul",
+    "writeToUs": "Write to us",
+    "whatsapp": "Message on WhatsApp",
+    "directions": "Directions to the Gurukul",
+    "madeWith": "Made with care, in three languages.",
+    "noTrackers": "No cookies, no trackers. Nothing is collected when you visit.",
+    "motto": ["॥ वेदोऽखिलो धर्ममूलम् ॥", "॥ वेदाः सर्व हितार्थाय ॥"],
+    "mottoGloss": "The Veda is the root of all dharma. The Vedas are for the good of all."
+  },
+  "notFound": {
+    "title": "This page has gone quiet.",
+    "body": "The page you were looking for is not here. It may have moved, or the link may have been copied wrongly. Everything on the site is one step away from the home page.",
+    "cta": "Back to the beginning"
+  },
+  "breadcrumbs": "You are here"
+}

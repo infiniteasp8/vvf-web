@@ -1,0 +1,122 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { Image } from 'astro:assets';
+import LangSwitcher from './LangSwitcher.astro';
+import Icon from './Icon.astro';
+import { navItems, type NavKey } from '@/lib/nav';
+import logo from '@/assets/brand/logo.png';
+
+interface Props {
+  locale: Locale;
+  path: string;
+  current?: NavKey;
+}
+const { locale, path, current } = Astro.props;
+const t = getMessages(locale);
+
+const items = navItems;
+---
+
+<header class="sticky top-0 z-40 border-b border-line bg-paper" data-header>
+  <div class="page flex min-h-[4.5rem] items-center gap-4">
+    <a href={localePath(locale, '/')} class="flex shrink-0 items-center gap-3 no-underline">
+      <Image
+        src={logo}
+        alt=""
+        height={48}
+        densities={[1, 2, 3]}
+        loading="eager"
+        decoding="async"
+        class="h-11 w-auto lg:h-12"
+      />
+      <span class="flex flex-col leading-tight">
+        <span class="t-deva text-[0.95rem] leading-tight text-ink" lang="hi">
+          {t.common.siteNameNative}
+        </span>
+        <span class="t-small tracking-[0.08em] text-ink-2 uppercase" lang="en">
+          Ved Vidyalaya Foundation
+        </span>
+      </span>
+    </a>
+
+    <nav
+      id="site-nav"
+      aria-label={t.common.menu}
+      class="site-nav ml-auto hidden items-center gap-5 lg:flex"
+      data-nav
+    >
+      <ul class="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-6">
+        {items.map((item) => (
+          <li>
+            <a
+              href={localePath(locale, item.href)}
+              class="nl block text-ink"
+              aria-current={current === item.key ? 'page' : undefined}
+            >
+              {t.common.nav[item.key]}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <LangSwitcher locale={locale} path={path} class="mt-4 lg:mt-0" />
+      <a href={localePath(locale, '/donate/')} class="btn btn-primary btn-sm mt-4 lg:mt-0">
+        {t.common.give}
+      </a>
+    </nav>
+
+    <a
+      href={localePath(locale, '/donate/')}
+      class="btn btn-primary btn-sm ml-auto lg:hidden"
+      data-nav-give
+    >
+      {t.common.give}
+    </a>
+    <button
+      type="button"
+      class="btn btn-ghost btn-icon lg:hidden"
+      aria-controls="site-nav"
+      aria-expanded="false"
+      data-nav-toggle
+    >
+      <span
+        class="sr-only"
+        data-nav-label
+        data-label-open={t.common.menu}
+        data-label-close={t.common.close}
+      >
+        {t.common.menu}
+      </span>
+      <Icon name="menu" class="nav-icon-open" />
+      <Icon name="close" class="nav-icon-close hidden" />
+    </button>
+  </div>
+</header>
+
+<style>
+  /* Mobile drawer: the nav becomes a block panel under the header bar. */
+  @media (max-width: 63.99rem) {
+    .site-nav.is-open {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      padding: 1rem 1rem 1.5rem;
+      background: var(--color-paper);
+      border-bottom: 1px solid var(--color-line);
+      animation: rise 0.35s var(--ease-rise) both;
+    }
+    .site-nav.is-open .nl {
+      padding: 0.75rem 0.125rem;
+      font-size: 1.0625rem;
+      border-bottom: 1px solid var(--color-line);
+    }
+    .site-nav.is-open .nl::after {
+      display: none;
+    }
+  }
+</style>

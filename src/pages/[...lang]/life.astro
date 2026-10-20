@@ -1,0 +1,89 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localeStaticPaths, type Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { breadcrumbJsonLd, webPageJsonLd } from '@/lib/seo';
+import { stories } from '@/lib/pages';
+import PageHero from '@/components/PageHero.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import DayTimeline from '@/components/DayTimeline.astro';
+import Stories from '@/components/Stories.astro';
+import ContactActions from '@/components/ContactActions.astro';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const locale = Astro.props.locale as Locale;
+const t = getMessages(locale);
+const l = t.life;
+const siteUrl = Astro.site!;
+const path = '/life/';
+const storyItems = await stories();
+---
+
+<BaseLayout
+  locale={locale}
+  title={l.meta.title}
+  description={l.meta.description}
+  path={path}
+  ogImage="/og/life.png"
+  current="life"
+  jsonLd={[
+    webPageJsonLd(siteUrl, locale, { path, title: l.meta.title, description: l.meta.description }),
+    breadcrumbJsonLd(siteUrl, locale, [
+      { name: t.common.home, path: '/' },
+      { name: t.common.nav.life, path },
+    ]),
+  ]}
+>
+  <PageHero
+    locale={locale}
+    kicker={l.hero.kicker}
+    title={l.hero.h1}
+    lede={l.hero.lede}
+    crumb={{ name: t.common.nav.life, path }}
+  />
+
+  <DayTimeline
+    locale={locale}
+    kicker={l.day.kicker}
+    title={l.day.h2}
+    lede={l.day.lede}
+    showLink={false}
+  />
+
+  <section class="page py-16 lg:py-24">
+    <SectionHead kicker={l.places.kicker} title={l.places.h2} />
+    <div class="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+      {l.places.items.map((item, i) => (
+        <article class={`reveal border-t border-line pt-6 ${i % 3 ? `d${i % 3}` : ''}`}>
+          <h3 class="t-h3 text-ink">{item.title}</h3>
+          <p class="mt-3 text-ink-2">{item.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <div class="bg-paper-2">
+    <Stories
+      locale={locale}
+      items={storyItems}
+      kicker={l.stories.kicker}
+      title={l.stories.h2}
+      lede={l.stories.lede}
+    />
+  </div>
+
+  <section class="page py-16 lg:py-24">
+    <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+      <SectionHead kicker={l.festivals.kicker} title={l.festivals.h2} />
+      <div class="reveal d1">
+        <p class="t-lede text-ink-2">{l.festivals.body}</p>
+        <div class="mt-8">
+          <ContactActions locale={locale} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

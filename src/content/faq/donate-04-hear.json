@@ -1,0 +1,14 @@
+{
+  "page": "donate",
+  "order": 4,
+  "question": {
+    "en": "Will I hear from you afterwards?",
+    "hi": "क्या बाद में आप मुझसे संपर्क करेंगे?",
+    "sa": "किं पश्चात् भवन्तः मां सम्पर्कयिष्यन्ति?"
+  },
+  "answer": {
+    "en": "If you tell us who you are, yes. A personal thank-you, then news from the Gurukul through the year. Never more than you want.",
+    "hi": "यदि आप हमें बताते हैं कि आप कौन हैं, तो हाँ। एक व्यक्तिगत धन्यवाद, फिर वर्ष भर गुरुकुल के समाचार। उससे ज़्यादा कभी नहीं जितना आप चाहें।",
+    "sa": "यदि भवन्तः कथयन्ति के भवन्तः इति, तर्हि आम्। व्यक्तिगतः धन्यवादः, ततः वर्षं यावत् गुरुकुलस्य वार्ताः। भवतां इच्छातः अधिकं कदापि न।"
+  }
+}

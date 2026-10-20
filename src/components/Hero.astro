@@ -1,0 +1,84 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import DawnArt from './art/DawnArt.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getMessages(locale);
+const h = t.home.hero;
+const words = h.h1.split(' ');
+---
+
+<section class="paper-bg relative overflow-hidden" data-hero>
+  <div class="page grid items-center gap-12 pt-10 pb-16 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:pt-20 lg:pb-24">
+    <div>
+      <p class="t-eyebrow rise text-kesari-deep" data-hero-rise>
+        {h.eyebrow}
+      </p>
+      <h1 class="t-display mt-5 text-ink" data-hero-rise>
+        {words.map((word, i) => (
+          <span
+            class="rise inline-block mr-[0.24em]"
+            style={`--d: ${(0.1 + i * 0.06).toFixed(2)}s`}
+          >
+            {word}
+          </span>
+        ))}
+      </h1>
+      <p class="t-lede rise d4 mt-7 max-w-2xl text-ink-2" data-hero-rise>
+        {h.lede}
+      </p>
+      <div class="rise d5 mt-9 flex flex-wrap gap-3" data-hero-rise>
+        <a href={localePath(locale, '/donate/')} class="btn btn-primary">
+          {h.cta1}
+        </a>
+        <a href={localePath(locale, '/life/')} class="btn btn-ghost">
+          {h.cta2}
+          <Icon name="arrow-right" size={18} />
+        </a>
+      </div>
+      <p class="t-small rise d6 mt-6 text-ink-2" data-hero-rise>
+        {h.trust}
+      </p>
+    </div>
+
+    <div class="rise d3 relative mx-auto w-full max-w-md lg:max-w-none" data-hero-rise>
+      <div class="frame aspect-[4/5] border border-line">
+        <DawnArt title={h.artAlt} />
+      </div>
+      <div class="float card absolute -bottom-6 left-4 max-w-[16rem] p-4 shadow-none md:-left-8 md:p-5">
+        <p class="t-eyebrow text-kesari-deep">{h.floatA}</p>
+        <p class="t-deva mt-2 text-ink">{h.floatB}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page flex items-center justify-between pb-8">
+    <a
+      href="#why"
+      class="t-small inline-flex items-center gap-2 text-ink-2 no-underline hover:text-ink"
+    >
+      <span class="bob inline-flex">
+        <Icon name="arrow-down" size={16} />
+      </span>
+      {h.scroll}
+    </a>
+    <button type="button" class="btn btn-ghost btn-sm hidden sm:inline-flex" data-intro-replay>
+      <Icon name="sun" size={16} />
+      {t.common.arrival.replay}
+    </button>
+  </div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    [data-intro-replay] {
+      display: none !important;
+    }
+  }
+</style>

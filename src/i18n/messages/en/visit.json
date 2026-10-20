@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "title": "Visit the Gurukul · Ved Vidyalaya Foundation",
+    "description": "Visitors are welcome at the dawn recitation and the midday meal. How to plan a visit, what to expect, how to reach us, and ways to volunteer or teach."
+  },
+  "hero": {
+    "kicker": "Visit",
+    "h1": "Come and stand in it at six in the morning.",
+    "lede": "No page can do what one morning in the Gurukul does. Visitors are welcome at the dawn recitation and at the midday meal. Write to us a week ahead and we will arrange the rest."
+  },
+  "when": {
+    "kicker": "When to come",
+    "h2": "Two hours worth travelling for",
+    "items": [
+      {
+        "title": "The dawn recitation",
+        "body": "Arrive while it is still dark. Sit at the edge of the verandah. The Gāyatrī first, then two hours of Veda pāṭha with the ācārya. Most visitors say nothing for a long time afterwards."
+      },
+      {
+        "title": "The midday meal",
+        "body": "Cooked by the students, eaten together on the floor. Guests are served first. You will be asked, kindly, to finish what is on your plate."
+      }
+    ]
+  },
+  "before": {
+    "kicker": "Before you come",
+    "h2": "A few things to know",
+    "items": [
+      {
+        "title": "Write a week ahead",
+        "body": "So that someone is free to receive you and the kitchen knows how many to cook for."
+      },
+      {
+        "title": "Dress simply",
+        "body": "Modest, comfortable clothes. Shoes come off at the verandah."
+      },
+      {
+        "title": "Bring nothing",
+        "body": "Gifts for the students are gently declined. If you would like to give, the Gurukul will tell you how."
+      },
+      {
+        "title": "Ask before photographing",
+        "body": "The students are children, and the recitation is a prayer. Most of the time the answer is yes."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Where to find us",
+    "h2": "Write, call, or message",
+    "lede": "A person replies, usually within a day or two. Please be patient during examinations and festivals."
+  },
+  "involved": {
+    "kicker": "Ways to be part of it",
+    "h2": "More than a visit",
+    "items": [
+      {
+        "title": "Teach, for a week or a year",
+        "body": "English, mathematics, science, computing. A teacher who stays a while changes what the students believe is possible. Write and tell us what you can offer."
+      },
+      {
+        "title": "Volunteer",
+        "body": "The kitchen, the garden, the library, repairs before the monsoon. There is always a job that needs a pair of hands and no special skill."
+      },
+      {
+        "title": "Give",
+        "body": "Any amount, once or every month, by UPI or bank transfer. It arrives whole and becomes meals, lamps and lessons."
+      }
+    ],
+    "giveCta": "How to give"
+  }
+}

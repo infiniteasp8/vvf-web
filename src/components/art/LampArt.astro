@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+const layer = 'absolute inset-0 h-full w-full';
+---
+
+<div class="relative h-full w-full overflow-hidden" role="img" aria-label={title}>
+  <svg class={layer} viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="lamp-night" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#121A2A"></stop>
+        <stop offset="1" stop-color="#1E2A3F"></stop>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="1000" fill="url(#lamp-night)"></rect>
+  </svg>
+
+  <svg
+    class={`${layer} glow`}
+    viewBox="0 0 800 1000"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <defs>
+      <radialGradient id="lamp-halo" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#F3C98B" stop-opacity="0.6"></stop>
+        <stop offset="0.55" stop-color="#F3C98B" stop-opacity="0.12"></stop>
+        <stop offset="1" stop-color="#F3C98B" stop-opacity="0"></stop>
+      </radialGradient>
+    </defs>
+    <circle cx="400" cy="560" r="340" fill="url(#lamp-halo)"></circle>
+  </svg>
+
+  <svg class={layer} viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect y="760" width="800" height="240" fill="#17202F"></rect>
+    <path d="M300 740c0 40 44 70 100 70s100-30 100-70z" fill="#8F4213"></path>
+    <ellipse cx="400" cy="740" rx="100" ry="20" fill="#B5551A"></ellipse>
+    <ellipse cx="400" cy="860" rx="180" ry="24" fill="#F3C98B" opacity="0.1"></ellipse>
+  </svg>
+
+  <svg
+    class={`${layer} flicker lamp-flame`}
+    viewBox="0 0 800 1000"
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="lamp-flame" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#B5551A"></stop>
+        <stop offset="0.45" stop-color="#F3C98B"></stop>
+        <stop offset="1" stop-color="#FAF6EE"></stop>
+      </linearGradient>
+    </defs>
+    <path d="M400 580c-34 56-36 100 0 140 36-40 34-84 0-140z" fill="url(#lamp-flame)"></path>
+  </svg>
+</div>
+
+<style>
+  .lamp-flame {
+    transform-origin: 50% 72%;
+  }
+</style>

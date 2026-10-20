@@ -1,0 +1,49 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { localeStaticPaths, type Locale } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { breadcrumbJsonLd, webPageJsonLd } from '@/lib/seo';
+import { allMoments } from '@/lib/pages';
+import PageHero from '@/components/PageHero.astro';
+import MomentsGrid from '@/components/MomentsGrid.astro';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const locale = Astro.props.locale as Locale;
+const t = getMessages(locale);
+const m = t.moments;
+const siteUrl = Astro.site!;
+const path = '/moments/';
+const items = await allMoments();
+---
+
+<BaseLayout
+  locale={locale}
+  title={m.meta.title}
+  description={m.meta.description}
+  path={path}
+  ogImage="/og/moments.png"
+  current="moments"
+  jsonLd={[
+    webPageJsonLd(siteUrl, locale, { path, title: m.meta.title, description: m.meta.description }),
+    breadcrumbJsonLd(siteUrl, locale, [
+      { name: t.common.home, path: '/' },
+      { name: t.common.nav.moments, path },
+    ]),
+  ]}
+>
+  <PageHero
+    locale={locale}
+    kicker={m.hero.kicker}
+    title={m.hero.h1}
+    lede={m.hero.lede}
+    crumb={{ name: t.common.nav.moments, path }}
+  />
+
+  <section class="page py-12 lg:py-16">
+    <MomentsGrid locale={locale} items={items} showDate />
+    <p class="t-ui reveal mt-10 text-center text-ink-2">{m.more}</p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,14 @@
+{
+  "page": "donate",
+  "order": 2,
+  "question": {
+    "en": "Can I give in someone's memory, or on a birthday or festival?",
+    "hi": "क्या मैं किसी की स्मृति में, या जन्मदिन या उत्सव पर दान कर सकता/सकती हूँ?",
+    "sa": "किं कस्यचित् स्मृतौ, जन्मदिने उत्सवे वा दानं कर्तुं शक्नोमि?"
+  },
+  "answer": {
+    "en": "Yes, and many people do. Write the name in the remark, or send us a message, and the students will remember them in the morning recitation.",
+    "hi": "हाँ, और बहुत लोग करते हैं। रिमार्क में नाम लिखें, या हमें संदेश भेजें, और विद्यार्थी प्रातः पाठ में उन्हें स्मरण करेंगे।",
+    "sa": "आम्, बहवः च कुर्वन्ति। टिप्पण्यां नाम लिखत, अथवा अस्मभ्यं सन्देशं प्रेषयत, छात्राः च प्रातःपाठे तान् स्मरिष्यन्ति।"
+  }
+}

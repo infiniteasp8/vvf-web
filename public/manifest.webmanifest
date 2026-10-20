@@ -1,0 +1,14 @@
+{
+  "name": "Ved Vidyalaya Foundation",
+  "short_name": "Ved Vidyalaya",
+  "description": "A living Gurukul for the Vedas, Sanskrit and a full education, free of charge.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FAF6EE",
+  "theme_color": "#FAF6EE",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

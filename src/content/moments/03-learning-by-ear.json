@@ -1,0 +1,18 @@
+{
+  "kind": "photo",
+  "featured": true,
+  "order": 3,
+  "date": "2026-08-02",
+  "title": { "en": "Learning by ear", "hi": "कान से सीखना", "sa": "श्रवणेन शिक्षणम्" },
+  "caption": {
+    "en": "One line at a time. The ācārya hears a single wrong tone among a dozen voices.",
+    "hi": "एक समय में एक पंक्ति। दर्जन भर स्वरों में आचार्य एक ग़लत स्वर सुन लेते हैं।",
+    "sa": "एकस्मिन् काले एका पङ्क्तिः। द्वादशसु स्वरेषु आचार्यः एकम् अशुद्धं स्वरं शृणोति।"
+  },
+  "alt": {
+    "en": "A teacher and a young student facing each other on a verandah, the student listening closely",
+    "hi": "बरामदे पर आमने-सामने बैठे गुरु और एक छोटा विद्यार्थी, विद्यार्थी ध्यान से सुनता हुआ",
+    "sa": "प्राङ्गणे परस्परं सम्मुखौ गुरुः एकः लघुच्छात्रः च, छात्रः सावधानं शृण्वन्"
+  },
+  "image": "../../assets/moments/learning-by-ear.svg"
+}

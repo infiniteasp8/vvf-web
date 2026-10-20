@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Why a Gurukul · Ved Vidyalaya Foundation",
+    "description": "Ved Vidyalaya Foundation keeps a Gurukul where children learn the Vedas by heart, speak Sanskrit and receive a full modern education, free of charge. Read why it matters and what we believe."
+  },
+  "hero": {
+    "kicker": "About the Foundation",
+    "h1": "A voice older than writing, and the children who carry it.",
+    "lede": "Ved Vidyalaya Foundation keeps a Gurukul: a home and a school where children learn the Vedas the way they have always been learned, from a teacher, by heart. They speak Sanskrit, study the subjects every child needs, and live simply, together. No family pays. Everything is given."
+  },
+  "what": {
+    "kicker": "What we are",
+    "h2": "A small Gurukul, kept whole",
+    "body": [
+      "There are grand institutions with many buildings. We are not one of them, and we do not wish to be. A Gurukul is a household first: a teacher who lives with his students, a kitchen that feeds them, a verandah where the morning begins, a fire that has not been allowed to go out.",
+      "Within that household a child receives three things at once. The Veda, received by ear and held in memory. Sanskrit, spoken until it is simply a language one thinks in. And a full school education, so that no door in the modern world is ever closed to them.",
+      "We would rather be a small Gurukul that is whole than a large one that is hollow."
+    ]
+  },
+  "free": {
+    "kicker": "Why it must be free",
+    "h2": "The Veda has never been sold. It has only ever been given.",
+    "body": [
+      "In the tradition, knowledge passes from teacher to student as a gift, and the student's whole life is the dakṣiṇā. We keep to that. There are no fees, no deposits, no charges for food or books or a bed. A family's means have nothing to do with whether their child may learn.",
+      "This is not a policy. It is the only way the tradition can continue honestly. The moment a Gurukul begins to choose students by what their parents can pay, it stops choosing by what the child can carry."
+    ]
+  },
+  "beliefs": {
+    "kicker": "What we believe",
+    "h2": "Four convictions that shape every day here",
+    "items": [
+      {
+        "title": "Memory is a living thing",
+        "body": "A recording preserves a sound. A trained child preserves a tradition: able to correct, to teach, to carry it to the next morning. We keep the Veda in people, not in archives."
+      },
+      {
+        "title": "A child's dignity comes first",
+        "body": "Discipline here is gentle and the days are full, but a student is never shamed and never made to feel small. The hardest lessons are learned by watching how the teacher lives."
+      },
+      {
+        "title": "Tradition and the world are not enemies",
+        "body": "Our students learn Pāṇini in the morning and algebra after lunch. They leave able to recite the Veda, and equally able to teach, to earn, to study further, to choose."
+      },
+      {
+        "title": "Gratitude is a discipline",
+        "body": "Everything in the Gurukul was given by someone. The students know it. Every meal begins by remembering the people who made it possible, including people they will never meet."
+      }
+    ]
+  },
+  "help": {
+    "kicker": "How you can help",
+    "h2": "Four ways to be part of it",
+    "items": [
+      {
+        "title": "Give",
+        "body": "Any amount, once or every month, by UPI or bank transfer. It arrives whole.",
+        "cta": "How to give",
+        "href": "/donate/"
+      },
+      {
+        "title": "Visit",
+        "body": "Come for the dawn recitation and the midday meal. One morning explains more than any page.",
+        "cta": "Plan a visit",
+        "href": "/visit/"
+      },
+      {
+        "title": "Teach or volunteer",
+        "body": "English, mathematics, science, computing, or simply time and care. Write and tell us what you can offer.",
+        "cta": "Write to us",
+        "href": "/visit/#contact"
+      },
+      {
+        "title": "Tell someone",
+        "body": "Most people who give found us through one person who cared enough to mention it. Be that person.",
+        "cta": "See the moments",
+        "href": "/moments/"
+      }
+    ]
+  },
+  "closing": {
+    "deva": "विद्या ददाति विनयं विनयाद्याति पात्रताम् ।",
+    "iast": "vidyā dadāti vinayaṁ, vinayād yāti pātratām",
+    "translation": "Knowledge gives humility; from humility comes worthiness.",
+    "note": "Hitopadeśa"
+  }
+}

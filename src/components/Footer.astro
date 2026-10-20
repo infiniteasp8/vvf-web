@@ -1,0 +1,134 @@
+---
+import type { Locale } from '@/i18n';
+import { localePath } from '@/i18n';
+import { getMessages } from '@/i18n/messages';
+import { site } from '@/data/site';
+import { Image } from 'astro:assets';
+import LangSwitcher from './LangSwitcher.astro';
+import logo from '@/assets/brand/logo.png';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = getMessages(locale);
+const f = t.common.footer;
+const year = new Date().getFullYear();
+const years = year > site.since ? `${site.since}–${year}` : `${site.since}`;
+const whatsappHref = site.contact.whatsapp
+  ? `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(t.common.whatsapp.text)}`
+  : '';
+const link = 'nl block w-fit text-paper/80 hover:text-paper';
+const heading = 't-eyebrow mb-4 text-amber';
+---
+
+<footer class="night-bg mt-24">
+  <div class="page py-16 lg:py-20">
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+      <div class="max-w-md">
+        <Image
+          src={logo}
+          alt=""
+          width={176}
+          densities={[1, 2]}
+          loading="lazy"
+          decoding="async"
+          class="h-auto w-40 md:w-44"
+        />
+        <p class="t-deva mt-5 text-2xl text-paper" lang="hi">
+          {t.common.siteNameNative}
+        </p>
+        <p class="mt-4 text-paper/80">{f.blurb}</p>
+        <p class="t-deva mt-6 text-xl leading-relaxed text-amber" lang="sa">
+          {f.motto.map((line) => (
+            <span class="block">{line}</span>
+          ))}
+        </p>
+        <p class="t-small mt-2 text-paper/70">{f.mottoGloss}</p>
+      </div>
+      <nav aria-label={f.explore}>
+        <h2 class={heading}>{f.explore}</h2>
+        <ul class="space-y-1">
+          <li>
+            <a href={localePath(locale, '/about/')} class={link}>
+              {f.why}
+            </a>
+          </li>
+          <li>
+            <a href={localePath(locale, '/education/')} class={link}>
+              {f.learning}
+            </a>
+          </li>
+          <li>
+            <a href={localePath(locale, '/life/')} class={link}>
+              {f.day}
+            </a>
+          </li>
+          <li>
+            <a href={localePath(locale, '/moments/')} class={link}>
+              {f.moments}
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label={f.involved}>
+        <h2 class={heading}>{f.involved}</h2>
+        <ul class="space-y-1">
+          <li>
+            <a href={localePath(locale, '/donate/')} class={link}>
+              {f.give}
+            </a>
+          </li>
+          <li>
+            <a href={localePath(locale, '/visit/#involved')} class={link}>
+              {f.volunteer}
+            </a>
+          </li>
+          <li>
+            <a href={localePath(locale, '/visit/')} class={link}>
+              {f.visit}
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label={f.contact}>
+        <h2 class={heading}>{f.contact}</h2>
+        <ul class="space-y-1">
+          {site.contact.email && (
+            <li>
+              <a href={`mailto:${site.contact.email}`} class={link}>
+                {f.writeToUs}
+              </a>
+            </li>
+          )}
+          {whatsappHref && (
+            <li>
+              <a href={whatsappHref} class={link} rel="noopener">
+                {f.whatsapp}
+              </a>
+            </li>
+          )}
+          {site.contact.mapUrl && (
+            <li>
+              <a href={site.contact.mapUrl} class={link} rel="noopener">
+                {f.directions}
+              </a>
+            </li>
+          )}
+        </ul>
+      </nav>
+    </div>
+
+    <hr class="my-10 border-0 border-t border-line-night" />
+
+    <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <LangSwitcher locale={locale} path="/" tone="night" landmark={false} />
+      <div class="t-small text-paper/70 md:text-right">
+        <p>
+          © {years} {site.name} · {f.madeWith}
+        </p>
+        <p class="mt-1">{f.noTrackers}</p>
+      </div>
+    </div>
+  </div>
+</footer>

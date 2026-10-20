@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Give · Keep a voice three thousand years old from falling silent",
+    "description": "Support the Gurukul by UPI or bank transfer. Any amount, once or every month. No payment gateway and nothing deducted: what you give arrives whole and becomes meals, lamps and lessons."
+  },
+  "hero": {
+    "kicker": "Support the Gurukul",
+    "h1": "Keep a voice three thousand years old from falling silent.",
+    "lede": "The Vedas were never meant to live on paper. They live in breath, in memory, in a teacher's patience and a child's early morning. Every meal, every lamp and every lesson in our Gurukul is given freely. That is possible only because people like you decide, quietly, to give.",
+    "cta1": "Give now",
+    "cta2": "Read the letter first",
+    "trust": "Any amount · Once or every month · No payment gateway, nothing deducted",
+    "artAlt": "An evening lamp: a single flame against a deep blue night"
+  },
+  "how": {
+    "kicker": "How to give",
+    "h2": "Two ways. Both go straight to the Gurukul.",
+    "lede": "Give what feels right, once or every month. Add your name in the remark if you would like us to write to you."
+  },
+  "steps": [
+    {
+      "title": "Give, in the way you prefer",
+      "body": "UPI or bank transfer. Any amount, once or monthly."
+    },
+    {
+      "title": "Tell us, if you wish",
+      "body": "Send a screenshot on WhatsApp so we know whom to thank."
+    },
+    {
+      "title": "We write back",
+      "body": "A personal thank-you, and news from the Gurukul through the year."
+    }
+  ],
+  "letter": {
+    "kicker": "A letter from the Gurukul",
+    "h2": "Before you decide, read this.",
+    "lede": "Written by the teachers, read aloud to the students, and offered to you.",
+    "salutation": "नमस्ते ।",
+    "paragraphs": [
+      "We do not know your name yet, but we know one thing about you. You stopped on a page about children learning something very old, and you read this far. That is rarer than you think.",
+      "Every morning, before the birds, our students sit on a cool stone floor and begin. The ācārya recites a line. They repeat it. He corrects a single accent. They repeat it again. It will take years. No one will ever applaud. And at the end of it, a young person will carry in their voice something that was carried in exactly this way through a hundred generations before them.",
+      "Nothing here is charged for. Not the food, not the lamps, not the lessons. Which means that everything here was given. The rice, the oil, the books, the teacher's dakṣiṇā, the roof over the pāṭhaśālā: each one was once a person's quiet decision, somewhere, to give.",
+      "If you decide to be one of those people, we will not call you a donor. We will call you what the tradition has always called the one for whom the fire is kept: yajamāna. When the fire is lit tomorrow morning, it will be lit, in part, for you."
+    ],
+    "signoff": "With gratitude,",
+    "signature": "The teachers and students of Ved Vidyalaya",
+    "closing": "ॐ सह नाववतु । सह नौ भुनक्तु ।"
+  },
+  "becomes": {
+    "kicker": "What your gift becomes",
+    "h2": "Small things, every day, for a very long time.",
+    "lede": "A Gurukul does not need grand things. It needs the same ordinary things, reliably, morning after morning.",
+    "items": [
+      {
+        "title": "A morning meal",
+        "body": "Before the first recitation, a warm meal cooked by the students, for the students."
+      },
+      {
+        "title": "Oil for the lamps, wood for the fire",
+        "body": "The agnihotra at dawn and dusk has never missed a day. Your gift keeps it that way."
+      },
+      {
+        "title": "A teacher's dakṣiṇā",
+        "body": "The ācāryas live here with their families. What they are given is offered with respect, not as a wage."
+      },
+      {
+        "title": "Books, and a roof that holds",
+        "body": "Texts for the library, notebooks for school, and repairs before the monsoon finds the gaps."
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "Questions people ask",
+    "h2": "Before you give",
+    "lede": "Anything else, write to us. A person replies."
+  },
+  "closing": {
+    "deva": "सर्वेषामेव दानानां ब्रह्मदानं विशिष्यते ।",
+    "iast": "sarveṣām eva dānānāṁ brahmadānaṁ viśiṣyate",
+    "translation": "Of all gifts, the gift of sacred knowledge is the most excellent.",
+    "cta": "Give now"
+  }
+}

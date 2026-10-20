@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Moments · Photographs and films from the Gurukul",
+    "description": "Photographs and short films from the Gurukul: the dawn recitation, lessons, the midday meal, lamps at dusk. New moments are added through the year."
+  },
+  "hero": {
+    "kicker": "Moments",
+    "h1": "Photographs and films from the Gurukul.",
+    "lede": "A festival, an examination, the monsoon, a new student's first morning. New pictures and short films are added here through the year, so that people far away can see what their gift keeps alive."
+  },
+  "film": "Film",
+  "watch": "Watch the film",
+  "filmSoon": "Short films will appear here",
+  "more": "More moments will appear here as the year unfolds.",
+  "dateLabel": "Taken on"
+}

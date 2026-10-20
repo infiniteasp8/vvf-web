@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t">
+  <title id="t">Under the old tree</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF6EE"/>
+      <stop offset="1" stop-color="#F3C98B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect y="620" width="1200" height="280" fill="#E6DAC2"/>
+  <g fill="#4F6B45">
+    <ellipse cx="600" cy="300" rx="470" ry="200"/>
+    <ellipse cx="380" cy="360" rx="260" ry="150" fill="#5F7D52"/>
+    <ellipse cx="820" cy="350" rx="280" ry="160" fill="#46603D"/>
+    <ellipse cx="600" cy="230" rx="300" ry="140" fill="#5F7D52"/>
+  </g>
+  <path d="M560 470c-10 60-30 110-60 150h200c-30-40-50-90-60-150z" fill="#5A4E44"/>
+  <path d="M560 470c-30-30-80-50-140-60 40 40 80 60 140 60zM640 470c30-30 80-50 140-60-40 40-80 60-140 60z" fill="#5A4E44"/>
+  <rect x="300" y="620" width="600" height="40" rx="6" fill="#D9CBB0"/>
+  <rect x="320" y="600" width="560" height="24" rx="6" fill="#C9B995"/>
+  <g fill="#1F1A17" opacity="0.9">
+    <g transform="translate(470 540)"><circle r="26"/><path d="M-54 90c0-50 18-78 54-78s54 28 54 78z"/></g>
+    <g transform="translate(720 540)"><circle r="26"/><path d="M-54 90c0-50 18-78 54-78s54 28 54 78z"/></g>
+  </g>
+  <g fill="#F3C98B" opacity="0.55">
+    <ellipse cx="200" cy="700" rx="60" ry="14"/>
+    <ellipse cx="1000" cy="690" rx="80" ry="16"/>
+    <ellipse cx="640" cy="760" rx="50" ry="12"/>
+  </g>
+</svg>
